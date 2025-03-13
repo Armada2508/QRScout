@@ -95,6 +95,20 @@
         "name": "Robot Capabilities",
         "fields": [
             {
+                "title": "Programming Language",
+                "type": "select",
+                "description": "What programming language does their robot primarily use?",
+                "required": false,
+                "defaultValue": "Unknown",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "java": "Java",
+                    "python": "Python",
+                    "other": "other"
+                },
+                "code": "programmingLanguage"
+            },
+            {
                 "title": "Climbing Capability",
                 "type": "select",
                 "description": "Can they climb a cage and what cage can they climb",
