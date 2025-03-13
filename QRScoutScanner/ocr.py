@@ -134,7 +134,7 @@ def update_google_sheet(qr_data):
     if sheet_number == 2:
         print(sheet_number)
         try:
-            sheet = client.open("Reefscape Scouter Spreadsheet").worksheet("Match")
+            sheet = client.open("Reefscape Scouter Spreadsheet").worksheet("Pit")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -153,7 +153,7 @@ def update_google_sheet(qr_data):
     elif sheet_number == 1:
         print(sheet_number)
         try:
-            sheet = client.open("Reefscape Scouter Spreadsheet").worksheet("Pit")
+            sheet = client.open("Reefscape Scouter Spreadsheet").worksheet("Match")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
