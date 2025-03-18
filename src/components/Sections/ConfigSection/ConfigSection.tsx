@@ -7,12 +7,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { setConfig, setFormData, useQRScoutState } from '@/store/store';
+import { setConfig, useQRScoutState } from '@/store/store';
 import { Copy, Edit2 } from 'lucide-react';
 import { useState } from 'react';
 import { Section } from '../../core/Section';
 import { ThemeSelector } from './ThemeSelector';
-import { stringify } from 'querystring';
 
 const cycleConfig = {
   "title": "QRScout Match",
