@@ -12,7 +12,7 @@ import { Copy, Edit2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Section } from '../../core/Section';
 import { ThemeSelector } from './ThemeSelector';
-import cycleConfigJson from '../../../../config/2025/cycleConfig.json';
+
 
 
 
