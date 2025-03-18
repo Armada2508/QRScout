@@ -1,6 +1,9 @@
 import { produce } from 'immer';
 import { cloneDeep } from 'lodash';
 import configJson from '../../config/2025/config.json';
+import cycleConfigJson from '../../config/2025/cycleConfig.json'
+import pitConfigJson from '../../config/2025/pitConfig.json'
+
 import {
   Config,
   configSchema,
@@ -10,7 +13,31 @@ import { createStore } from './createStore';
 
 type Result<T> = { success: true; data: T } | { success: false; error: Error };
 
-function getDefaultConfig(): Config {
+// function getDefaultConfig(): Config {
+//   const config = configSchema.safeParse(configJson);
+//   if (!config.success) {
+//     console.error(config.error);
+//     throw new Error('Invalid config schema');
+//   }
+//   return config.data;
+// }
+export function getCycleConfig(): Config {
+  const config = configSchema.safeParse(cycleConfigJson);
+  if (!config.success) {
+    console.error(config.error);
+    throw new Error('Invalid config schema');
+  }
+  return config.data;
+}
+export function getPitConfig(): Config {
+  const config = configSchema.safeParse(pitConfigJson);
+  if (!config.success) {
+    console.error(config.error);
+    throw new Error('Invalid config schema');
+  }
+  return config.data;
+}
+export function getMatchConfig(): Config {
   const config = configSchema.safeParse(configJson);
   if (!config.success) {
     console.error(config.error);
@@ -18,7 +45,6 @@ function getDefaultConfig(): Config {
   }
   return config.data;
 }
-
 export function getConfig() {
   const configData = cloneDeep(useQRScoutState.getState().formData);
   return configData;
@@ -31,13 +57,33 @@ export interface QRScoutState {
 }
 
 const initialState: QRScoutState = {
-  formData: getDefaultConfig(),
-  fieldValues: getDefaultConfig().sections.flatMap(s =>
+  formData: getMatchConfig(),
+  fieldValues: getMatchConfig().sections.flatMap(s =>
     s.fields.map(f => ({ code: f.code, value: f.defaultValue })),
   ),
   showQR: false,
 };
-
+const cycleState: QRScoutState = {
+  formData: getCycleConfig(),
+  fieldValues: getCycleConfig().sections.flatMap(s =>
+    s.fields.map(f => ({ code: f.code, value: f.defaultValue })),
+  ),
+  showQR: false,
+};
+const matchState: QRScoutState = {
+  formData: getMatchConfig(),
+  fieldValues: getMatchConfig().sections.flatMap(s =>
+    s.fields.map(f => ({ code: f.code, value: f.defaultValue })),
+  ),
+  showQR: false,
+};
+const pitState: QRScoutState = {
+  formData: getPitConfig(),
+  fieldValues: getPitConfig().sections.flatMap(s =>
+    s.fields.map(f => ({ code: f.code, value: f.defaultValue })),
+  ),
+  showQR: false,
+};
 export const useQRScoutState = createStore<QRScoutState>(
   initialState,
   'qrScout',
@@ -49,7 +95,9 @@ export const useQRScoutState = createStore<QRScoutState>(
 export function resetToDefaultConfig() {
   useQRScoutState.setState(initialState);
 }
-
+export function resetToCycleConfig() {
+  useQRScoutState.setState(cycleState);
+}
 export async function fetchConfigFromURL(url: string): Promise<Result<void>> {
   try {
     const response = await fetch(url);

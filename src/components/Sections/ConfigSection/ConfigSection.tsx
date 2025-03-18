@@ -7,12 +7,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { setConfig, useQRScoutState } from '@/store/store';
+import { resetToCycleConfig, setConfig, useQRScoutState } from '@/store/store';
 import { Copy, Edit2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Section } from '../../core/Section';
 import { ThemeSelector } from './ThemeSelector';
-
+import { getCycleConfig, getMatchConfig, getPitConfig } from "@/store/store"
 
 
 
@@ -20,20 +20,7 @@ export function ConfigSection() {
   const [showEditor, setShowEditor] = useState(false);
   // Could I potentially change the formData variable for this?
   const formData = useQRScoutState(state => state.formData);
-function ConfigComponent() {
-  const [text, setText] = useState<string>("");
 
-  useEffect(() => {
-    const loadConfig = async () => {
-      const { default: config } = await import('../../../../config/2025/cycleConfig.json');
-      setText(String(config));
-    };
-
-    loadConfig();
-  }, []);
-
-  return <h1>{text}</h1>;
-}
   return (
     <Section>
       <div className="flex flex-col justify-center items-center gap-4">
@@ -75,7 +62,7 @@ function ConfigComponent() {
         <Button
           variant="destructive"
           onClick={() =>
-            ConfigComponent()
+            resetToCycleConfig()
             
           }
         >
