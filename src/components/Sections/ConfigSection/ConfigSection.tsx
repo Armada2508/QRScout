@@ -1,15 +1,6 @@
-import { ConfigEditor } from '@/components/ConfigEditor';
 import { Button } from '@/components/ui/button';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
-import { resetToCycleConfig, setConfig, useQRScoutState, resetToMatchConfig, resetToPitConfig } from '@/store/store';
-import { Copy, Edit2 } from 'lucide-react';
-import { useState } from 'react';
+import { resetToCycleConfig, useQRScoutState, resetToMatchConfig, resetToPitConfig } from '@/store/store';
+import { Copy } from 'lucide-react';
 import { Section } from '../../core/Section';
 import { ThemeSelector } from './ThemeSelector';
 // import { getCycleConfig, getMatchConfig, getPitConfig } from "@/store/store"
@@ -17,8 +8,6 @@ import { ThemeSelector } from './ThemeSelector';
 
 
 export function ConfigSection() {
-  const [showEditor, setShowEditor] = useState(false);
-  // Could I potentially change the formData variable for this?
   const formData = useQRScoutState(state => state.formData);
 
   return (
@@ -39,26 +28,6 @@ export function ConfigSection() {
           <Copy className="h-5 w-5" />
           Copy Column Names
         </Button>
-        <Sheet open={showEditor} onOpenChange={setShowEditor}>
-          <SheetTrigger asChild>
-            <Button variant="secondary">
-              <Edit2 className="h-5 w-5" />
-              Edit Config
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="bottom" className="w-full h-full">
-            <SheetHeader>
-              <SheetTitle>Edit Config</SheetTitle>
-            </SheetHeader>
-            <ConfigEditor
-              onCancel={() => setShowEditor(false)}
-              onSave={configString => {
-                setConfig(configString);
-                setShowEditor(false);
-              }}
-            />
-          </SheetContent>
-        </Sheet>
         <Button
           variant="secondary"
           onClick={() =>
@@ -81,7 +50,7 @@ export function ConfigSection() {
             resetToPitConfig() 
           }
         >
-          Match
+          Pit
         </Button>
         <ThemeSelector />
       </div>
