@@ -60,7 +60,7 @@ export function ConfigSection() {
           </SheetContent>
         </Sheet>
         <Button
-          variant="secondary"
+          variant="destructive"
           onClick={() =>
             setConfig(String(cycleConfigJson))
           }
