@@ -235,16 +235,12 @@ export function ConfigSection() {
           </SheetContent>
         </Sheet>
         <Button
-          variant={"secondary"}
-          
+          variant="secondary"
           onClick={() =>
             setConfig(String(cycleConfig))
           }
-            
         >
-
-
-
+          Cycle
         </Button>
         <ThemeSelector />
       </div>
