@@ -7,12 +7,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { resetToCycleConfig, setConfig, useQRScoutState } from '@/store/store';
+import { resetToCycleConfig, setConfig, useQRScoutState, resetToMatchConfig, resetToPitConfig } from '@/store/store';
 import { Copy, Edit2 } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Section } from '../../core/Section';
 import { ThemeSelector } from './ThemeSelector';
-import { getCycleConfig, getMatchConfig, getPitConfig } from "@/store/store"
+// import { getCycleConfig, getMatchConfig, getPitConfig } from "@/store/store"
 
 
 
@@ -60,13 +60,28 @@ export function ConfigSection() {
           </SheetContent>
         </Sheet>
         <Button
-          variant="destructive"
+          variant="secondary"
           onClick={() =>
-            resetToCycleConfig()
-            
+            resetToCycleConfig() 
           }
         >
           Cycle
+        </Button>
+        <Button
+          variant="secondary"
+          onClick={() =>
+            resetToMatchConfig() 
+          }
+        >
+          Match
+        </Button>
+        <Button
+          variant="secondary"
+          onClick={() =>
+            resetToPitConfig() 
+          }
+        >
+          Match
         </Button>
         <ThemeSelector />
       </div>

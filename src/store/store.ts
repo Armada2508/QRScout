@@ -98,6 +98,12 @@ export function resetToDefaultConfig() {
 export function resetToCycleConfig() {
   useQRScoutState.setState(cycleState);
 }
+export function resetToMatchConfig() {
+  useQRScoutState.setState(matchState);
+}
+export function resetToPitConfig() {
+  useQRScoutState.setState(pitState);
+}
 export async function fetchConfigFromURL(url: string): Promise<Result<void>> {
   try {
     const response = await fetch(url);
