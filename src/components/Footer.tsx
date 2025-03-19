@@ -16,6 +16,7 @@ export function Footer() {
             </span>
           </>
         )}
+        
       </div>
     </footer>
   );

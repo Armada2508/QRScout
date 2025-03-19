@@ -56,13 +56,14 @@ export function ConfigSection() {
           <LandPlot className='h-5, w-5'/>
           Pit
         </Button>
-        <Button
-          variant="ghost"
-          onClick={() =>
-             Button.displayName = "owo"
-          }
-        >
-        </Button>
+        <button id="openModal">Open the Modal</button>
+        <dialog id='modal' className="modal">
+          <button id="closeModal" className="modal-close-btn">Close</button>
+          <p>hi</p>
+          
+
+        </dialog>
+        
         <ThemeSelector />
       </div>
     </Section>
