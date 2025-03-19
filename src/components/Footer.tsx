@@ -1,5 +1,6 @@
 import { useQRScoutState } from '@/store/store';
 import { Heart } from 'lucide-react';
+import { Button } from '../components/ui/button';
 
 export function Footer() {
   const teamNumber = useQRScoutState(state => state.formData.teamNumber);
@@ -16,6 +17,12 @@ export function Footer() {
             </span>
           </>
         )}
+        <Button className='h-4 w-4'>
+              variant="secondary"
+              size="icon"
+              
+              owo
+          </Button>
       </div>
     </footer>
   );
