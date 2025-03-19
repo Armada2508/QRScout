@@ -1,8 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { resetToCycleConfig, useQRScoutState, resetToMatchConfig, resetToPitConfig } from '@/store/store';
-import { Copy } from 'lucide-react';
+import { Clock, Copy } from 'lucide-react';
 import { Section } from '../../core/Section';
 import { ThemeSelector } from './ThemeSelector';
+import { LandPlot, Tv } from 'lucide-react';
 // import { getCycleConfig, getMatchConfig, getPitConfig } from "@/store/store"
 
 
@@ -34,6 +35,7 @@ export function ConfigSection() {
             resetToCycleConfig() 
           }
         >
+          <Clock className='h-5, w-5'/>
           Cycle
         </Button>
         <Button
@@ -42,6 +44,7 @@ export function ConfigSection() {
             resetToMatchConfig() 
           }
         >
+          <Tv className='h-5, w-5'/>
           Match
         </Button>
         <Button
@@ -50,6 +53,7 @@ export function ConfigSection() {
             resetToPitConfig() 
           }
         >
+          <LandPlot className='h-5, w-5'/>
           Pit
         </Button>
         <ThemeSelector />
