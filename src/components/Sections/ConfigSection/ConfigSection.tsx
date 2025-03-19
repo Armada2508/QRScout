@@ -56,6 +56,15 @@ export function ConfigSection() {
           <LandPlot className='h-5, w-5'/>
           Pit
         </Button>
+        <Button
+          variant="ghost"
+          onClick={() =>
+             Button.displayName = "owo"
+          }
+        >
+          <LandPlot className='h-5, w-5'/>
+          Pit
+        </Button>
         <ThemeSelector />
       </div>
     </Section>
