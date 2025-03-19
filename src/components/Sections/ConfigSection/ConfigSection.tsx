@@ -62,7 +62,6 @@ export function ConfigSection() {
              Button.displayName = "owo"
           }
         >
-          <LandPlot className='h-5, w-5'/>
         </Button>
         <ThemeSelector />
       </div>
