@@ -9,12 +9,12 @@ import { LandPlot, Tv } from 'lucide-react';
 
 
 export function ConfigSection() {
-  const formData = useQRScoutState(state => state.formData);
-
+  // const formData = useQRScoutState(state => state.formData);
+  
   return (
-    <Section>
+    <Section title='Change Form'>
       <div className="flex flex-col justify-center items-center gap-4">
-        <Button
+        {/* <Button
           variant="secondary"
           onClick={() =>
             navigator.clipboard.writeText(
@@ -28,7 +28,7 @@ export function ConfigSection() {
         >
           <Copy className="h-5 w-5" />
           Copy Column Names
-        </Button>
+        </Button> */}
         <Button
           variant="secondary"
           onClick={() =>
@@ -56,13 +56,6 @@ export function ConfigSection() {
           <LandPlot className='h-5, w-5'/>
           Pit
         </Button>
-        <button id="openModal">Open the Modal</button>
-        <dialog id='modal' className="modal">
-          <button id="closeModal" className="modal-close-btn">Close</button>
-          <p>hi</p>
-          
-
-        </dialog>
         
         <ThemeSelector />
       </div>
