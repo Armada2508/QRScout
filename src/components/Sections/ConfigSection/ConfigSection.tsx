@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { resetToCycleConfig, useQRScoutState, resetToMatchConfig, resetToPitConfig } from '@/store/store';
-import { Clock, Copy } from 'lucide-react';
+import { resetToCycleConfig, resetToMatchConfig, resetToPitConfig } from '@/store/store';
+import { Clock } from 'lucide-react';
 import { Section } from '../../core/Section';
 import { ThemeSelector } from './ThemeSelector';
 import { LandPlot, Tv } from 'lucide-react';
