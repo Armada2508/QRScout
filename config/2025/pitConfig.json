@@ -512,7 +512,7 @@
                 "required": false,
                 "defaultValue": false,
                 "formResetBehavior": "reset",
-                "code": "matchscouting" 
+                "code": "pitscouting" 
             }
         ]
     },
