@@ -4,7 +4,6 @@ import { Clock } from 'lucide-react';
 import { Section } from '../../core/Section';
 import { ThemeSelector } from './ThemeSelector';
 import { LandPlot, Tv } from 'lucide-react';
-import { Modal } from '../../core/Modal'
 // import { getCycleConfig, getMatchConfig, getPitConfig } from "@/store/store"
 
 
