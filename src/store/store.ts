@@ -4,6 +4,7 @@ import configJson from '../../config/2025/config.json';
 import cycleConfigJson from '../../config/2025/cycleConfig.json'
 import pitConfigJson from '../../config/2025/pitConfig.json'
 import matchConfigOwo from '../../config/2025/forbiddenConfigs/matchConfigOwO.json'
+import pitConfigOwO from "../../config/2025/forbiddenConfigs/pitConfigOwO.json"
 import {
   Config,
   configSchema,
@@ -53,6 +54,14 @@ export function getMatchOwOConfig(): Config {
   }
   return config.data;
 }
+export function getPitOwOConfig(): Config {
+  const config = configSchema.safeParse(pitConfigOwO);
+  if (!config.success) {
+    console.error(config.error);
+    throw new Error('Invalid config schema');
+  }
+  return config.data;
+}
 export function getConfig() {
   const configData = cloneDeep(useQRScoutState.getState().formData);
   return configData;
@@ -81,6 +90,13 @@ const cycleState: QRScoutState = {
 const matchOwOstate: QRScoutState = {
   formData: getMatchOwOConfig(),
   fieldValues: getMatchOwOConfig().sections.flatMap(s =>
+    s.fields.map(f => ({ code: f.code, value: f.defaultValue })),
+  ),
+  showQR: false,
+};
+const pitOwOState: QRScoutState = {
+  formData: getPitOwOConfig(),
+  fieldValues: getPitOwOConfig().sections.flatMap(s =>
     s.fields.map(f => ({ code: f.code, value: f.defaultValue })),
   ),
   showQR: false,
@@ -121,6 +137,9 @@ export function resetToPitConfig() {
 }
 export function resetToMatchConfigOwO() {
   useQRScoutState.setState(matchOwOstate)
+}
+export function resetToPitOwOConfig() {
+  useQRScoutState.setState(pitOwOState);
 }
 export async function fetchConfigFromURL(url: string): Promise<Result<void>> {
   try {

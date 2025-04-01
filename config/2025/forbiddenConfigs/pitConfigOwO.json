@@ -1,0 +1,557 @@
+{
+    "title": "QRScout",
+  "page_title": "Reefscape",
+  "delimiter": "\t",
+  "teamNumber": 2508,
+  "theme": {
+    "light": {
+      "background": "307 98% 85%",
+        "foreground": "0 0% 98%",
+        "card": "0 0% 3.9%",
+        "card_foreground": "0 0% 98%",
+        "popover": "0 0% 3.9%",
+        "popover_foreground": "0 0% 98%",
+        "primary": "181 100% 50%",
+        "primary_foreground": "0 50% 0%",
+        "secondary": "181 100% 50%",
+        "secondary_foreground": "0 50% 0%",
+        "muted": "0 0% 14.9%",
+        "muted_foreground": "0 0% 63.9%",
+        "accent": "0 0% 14.9%",
+        "accent_foreground": "0 0% 98%",
+        "destructive": "181 100% 50%",
+        "destructive_foreground": "0 50% 0%",
+        "border": "0 0% 14.9%",
+        "input": "0 0% 14.9%",
+        "ring": "354.44 71.3% 47.9%",
+        "chart_1": "220 70% 50%",
+        "chart_2": "160 60% 45%",
+        "chart_3": "30 80% 55%",
+        "chart_4": "280 65% 60%",
+        "chart_5": "340 75% 55%"
+    },
+    "dark": {
+      "background": "307 98% 85%",
+        "foreground": "0 0% 98%",
+        "card": "0 0% 3.9%",
+        "card_foreground": "0 0% 98%",
+        "popover": "0 0% 3.9%",
+        "popover_foreground": "0 0% 98%",
+        "primary": "181 100% 50%",
+        "primary_foreground": "0 50% 0%",
+        "secondary": "181 100% 50%",
+        "secondary_foreground": "0 50% 0%",
+        "muted": "0 0% 14.9%",
+        "muted_foreground": "0 0% 63.9%",
+        "accent": "0 0% 14.9%",
+        "accent_foreground": "0 0% 98%",
+        "destructive": "181 100% 50%",
+        "destructive_foreground": "0 50% 0%",
+        "border": "0 0% 14.9%",
+        "input": "0 0% 14.9%",
+        "ring": "354.44 71.3% 47.9%",
+        "chart_1": "220 70% 50%",
+        "chart_2": "160 60% 45%",
+        "chart_3": "30 80% 55%",
+        "chart_4": "280 65% 60%",
+        "chart_5": "340 75% 55%"
+    }
+  },
+  "sections": [
+    {
+        "name": "Tweam Infwo OwO",
+        "fields": [
+            
+            {
+                "title": "Scowter Initaws OwO",
+                "description": "Enter the initials of the scouter",
+                "type": "text",
+                "required": true,
+                "code": "scouter",
+                "defaultValue": "",
+                "formResetBehavior": "preserve"
+            },
+            {
+                "title": "Tweam Nuwmber OwO",
+                "description": "Enter the number of the team being scouted",
+                "type": "number",
+                "required": true,
+                "code": "team",
+                "defaultValue": 0,
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Cowl Rowbot Name OwO",
+                "description": "Does their robot have a name?",
+                "type": "text",
+                "required": false,
+                "code": "silly",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            }
+        ]
+    },
+    {
+        "name": "Rowbot Capabiwities",
+        "fields": [
+            {
+                "title": "Cwimbing Capabiwity OwO",
+                "type": "select",
+                "description": "Can they climb a cage and what cage can they climb",
+                "required": false,
+                "defaultValue": "neither",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "deep": "Deep Cage",
+                    "shallow": "Shallow Cage",
+                    "both": "Both",
+                    "neither": "Cannot Climb"
+                },
+                "code": "clicapability"
+            },
+            {
+                "title": "Estimatwed Cwimbing Time OwO",
+                "type": "number",
+                "description": "How many seconds does it take to climb a cage",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "clispeed"
+            },
+            {
+                "title": "Estimawted Cowal Time OwO",
+                "type": "number",
+                "description": "How many seconds does it take to collect and score in the reef",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "coralspeed"
+            },
+            {
+                "title": "Estimawted Awgae Pwocessor Time OwO",
+                "type": "number",
+                "description": "How many seconds does it take to collect and score in the processor",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "algprospeed"
+            },
+            {
+                "title": "Estimawted Awgae Bawrge Time OwO",
+                "type": "number",
+                "description": "How many seconds does it take to collect and score in the barge",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "algbarspeed"
+            },
+            {
+                "title": "Diswodging Awgae OwO",
+                "type": "boolean",
+                "description": "Are they able to remove algae from the reef",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "algremoval"
+            },
+            {
+                "title": "Scowing Awgae OwO",
+                "type": "select",
+                "required": false,
+                "defaultValue": "none",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "processor": "Processor",
+                    "net": "Net",
+                    "both": "Both",
+                    "none": "None"
+                },
+                "code": "algscore"
+            },
+            {
+                "title": "Weef L1 OwO",
+                "type": "boolean",
+                "description": "Can they score on L1",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "reefL1"
+            },
+            {
+                "title": "Weef L2 OwO",
+                "type": "boolean",
+                "description": "Can they score on L2",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "reefL2"
+            },
+            {
+                "title": "Weef L3 OwO",
+                "type": "boolean",
+                "description": "Can they score on L3",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "reefL3"
+            },
+            {
+                "title": "Weef L4 OwO",
+                "type": "boolean",
+                "description": "Can they score on L4",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "reefL4"
+            },
+            {
+                "title": "Cowal Pwickup Owptions OwO",
+                "type": "select",
+                "description": "Where can they pick up coral",
+                "required": false,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "None": "None",
+                    "Ground": "Ground",
+                    "human-player": "Human Player",
+                    "Both": "Both"
+                },
+                "code": "corpickup"
+            }
+        ]
+    },
+    {
+        "name": "Dwivebase Infwo OwO",
+        "fields": [
+            {
+                "title": "Drivebase",
+                "type": "select",
+                "required": false,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "swerve": "Swerve",
+                    "west/tank": "West Coast/Tank",
+                    "butterfly": "Butterfly/Grasshopper",
+                    "mechanum": "Mechanum",
+                    "other": "Other"
+                },
+                "code": "drv"
+            },
+            {
+                "title": "Gear Watio OwO",
+                "type": "number",
+                "description": "What is the gear ratio of their drivebase",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "gearratio"
+            },
+            {
+                "title": "Dwivebase Mowtors OwO",
+                "type": "select",
+                "description": "What motors are they using to drive (not turning)",
+                "required": false,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "Kraken": "Kraken",
+                    "Falcon": "Falcon",
+                    "Neo": "Neo",
+                    "Vortex": "Vortex",
+                    "other": "Other"
+                },
+                "code": "drivemotors"
+            },
+            {
+                "title": "Other Dwive Mowtor OwO",
+                "type": "text",
+                "description": "What motor they are using if not one of the above four",
+                "required": false,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "code": "otherdrivemotor"
+            },
+            {
+                "title": "Length OwO",
+                "type": "number",
+                "description": "Length of robot (in inches)",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "len"
+            },
+            {
+                "title": "Widwth OwO",
+                "type": "number",
+                "description": "Width of robot (in inches)",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "wid"
+            },
+            {
+                "title": "Weight OwO",
+                "type": "number",
+                "description": "Weight of robot (in pounds)",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "wei"
+            }
+        ]
+    },
+    {
+        "name": "Genwal Game Focwus OwO",
+        "fields": [
+            {
+                "title": "Cowal OwO",
+                "type": "boolean",
+                "description": "Will they try to score coral",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "cor"
+            },
+            {
+                "title": "Awgae OwO",
+                "type": "boolean",
+                "description": "Will they try to score algae",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "alg"
+            },
+            {
+                "title": "Cwimb OwO",
+                "type": "boolean",
+                "description": "Will they try to climb a cage",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "cli"
+            },
+            {
+                "title": "Defense OwO",
+                "type": "boolean",
+                "description": "Will they focus on defense",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "def"
+            },
+            {
+                "title": "Other",
+                "type": "text",
+                "description": "Is there anything else they'll try to do during the match",
+                "required": false,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "code": "oth"
+            }
+        ]
+    },
+    {
+        "name": "Hooman Pwayer OwO",
+        "fields": [
+            {
+                "title": "Cowal stwation OwO",
+                "type": "boolean",
+                "description": "Do they have someone at the coral station",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "corstat"
+            },
+            {
+                "title": "Bawge scowing OwO",
+                "type": "boolean",
+                "description": "Are they able to score in the barge",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "barscor"
+            }
+        ]
+    },
+    {
+        "name": "Awto OwO",
+        "fields": [
+            {
+                "title": "Awto Capabiwities OwO",
+                "type": "select",
+                "description": "What can they do during autonomous",
+                "required": false,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "leave-line": "Leave Starting Line",
+                    "score-L1": "Score in L1",
+                    "score-L2": "Score in L2",
+                    "score-L3": "Score in L3",
+                    "score-L4": "Score in L4",
+                    "score-processor": "Score in Processor",
+                    "score-barge": "Score in Barge"
+                },
+                "code": "autochoices"
+            },
+            {
+                "title": "L1 Scowed OwO",
+                "type": "number",
+                "description": "How many times can they score in L1",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "l1scored"
+            },
+            {
+                "title": "L2 Scowed OwO",
+                "type": "number",
+                "description": "How many times can they score in L2",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "l2scored"
+            },
+            {
+                "title": "L3 Scowed OwO",
+                "type": "number",
+                "description": "How many times can they score in L3",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "l3scored"
+            },
+            {
+                "title": "L4 Scowed OwO",
+                "type": "number",
+                "description": "How many times can they score in L4",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "l4scored"
+            },
+            {
+                "title": "Pwocessor Scowed OwO",
+                "type": "number",
+                "description": "How many times can they score in the processor",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "processorscored"
+            },
+            {
+                "title": "Bawge Scowed OwO",
+                "type": "number",
+                "description": "How many times can they score in the barge",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "bargescored"
+            }
+        ]
+    },
+    {
+        "name": "Estimawted Cwycle Times OwO",
+        "fields": [
+            {
+                "title": "Coral Cycle Time OwO",
+                "type": "number",
+                "description": "How many seconds does it take to score coral",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "corcycle"
+            },
+            {
+                "title": "Awgae Cwycle Time OwO",
+                "type": "number",
+                "description": "How many seconds does it take to score algae",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "algcycle"
+            },
+            {
+                "title": "Cwimb Cwycle Time OwO",
+                "type": "number",
+                "description": "How many seconds does it take to climb on the preferred cage",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "clicycle"
+            },
+            {
+                "title": "Owther OwO",
+                "type": "text",
+                "description": "Do they know any other cycle times",
+                "required": false,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "code": "othcycle"
+            }
+        ]
+    },
+    {
+        "name": "Scouting",
+        "fields": [
+            {
+                "title": "Match Scouting",
+                "type": "boolean",
+                "description": "Are they scouting matches",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "matchscouting" 
+            },
+            {
+                "title": "Pit Scouting",
+                "type": "boolean",
+                "description": "Are they scouting pits",
+                "required": false,
+                "defaultValue": false,
+                "formResetBehavior": "reset",
+                "code": "pitscouting" 
+            }
+        ]
+    },
+    {
+        "name": "Comments OwO",
+        "fields": [
+            {
+                "title": "Pwogwamming Languwage OwO",
+                "type": "select",
+                "description": "What programming language does their robot primarily use?",
+                "required": false,
+                "defaultValue": "Unknown",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "java": "Java",
+                    "python": "Python",
+                    "other": "other"
+                },
+                "code": "programmingLanguage"
+            },
+            {
+                "title": "Whats your favowite soda OwO",
+                "type": "text",
+                "description": "if they say dr pepper they are super cool",
+                "required": true,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "code": "soda"
+            },
+            {
+                "title": "commwents OwO",
+                "type": "text",
+                "description": "Other unique / notable things about the robot / team",
+                "required": false,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "code": "comments"
+            }
+        ]
+    }
+]
+}

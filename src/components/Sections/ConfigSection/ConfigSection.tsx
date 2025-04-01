@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { resetToCycleConfig, resetToMatchConfig, resetToMatchConfigOwO, resetToPitConfig } from '@/store/store';
+import { resetToCycleConfig, resetToMatchConfig, resetToMatchConfigOwO, resetToPitOwOConfig, resetToPitConfig } from '@/store/store';
 import { Clock } from 'lucide-react';
 import { Section } from '../../core/Section';
 import { ThemeSelector } from './ThemeSelector';
@@ -86,8 +86,11 @@ export function ConfigSection(props: ForiddenConfigsProps) {
             <DialogTitle className="text-3xl text-primary text-center font-rhr-ns tracking-wider ">
               Forbidden Configs
             </DialogTitle>
-            <Button onClick={() => resetToMatchConfigOwO()} variant={"secondary"} className='h-5, w-12'>
-              MatchOwO
+            <Button onClick={() => resetToMatchConfigOwO()} variant={"secondary"} className='h-5, w-20'>
+              Match OwO
+            </Button>
+            <Button onClick={() => resetToPitOwOConfig()} variant={"secondary"} className='h-5, w-20'>
+              Pit OwO
             </Button>
             <DialogFooter>
 

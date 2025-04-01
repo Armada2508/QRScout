@@ -62,7 +62,7 @@
         "name": "Pwemeowch OwO",
         "fields": [
           {
-            "title": "Scouter Initials",
+            "title": "Scowter Initwals OwO",
             "description": "Enter the initials of the scouter.",
             "type": "text",
             "required": true,
@@ -71,7 +71,7 @@
             "formResetBehavior": "preserve"
           },
           {
-            "title": "Match Number",
+            "title": "Meowch Nuwmber OwO",
             "description": "Enter the match number.",
             "type": "number",
             "required": true,
@@ -80,7 +80,7 @@
             "formResetBehavior": "increment"
           },
           {
-            "title": "Robot",
+            "title": "Robot Owo",
             "description": "The robot you are scouting this match, based on driver station position.",
             "type": "select",
             "required": true,
@@ -97,7 +97,7 @@
             "formResetBehavior": "preserve"
           },
           {
-            "title": "Team Number",
+            "title": "Tweam Nuwmber OwO",
             "description": "The team number of the robot you're scouting.",
             "type": "number",
             "required": true,
@@ -107,7 +107,7 @@
             "max": 19999
           },
           {
-            "title": "Starting Position",
+            "title": "Stawting Powsition OwO",
             "description": "The starting position of the robot.",
             "type": "select",
             "required": true,
@@ -120,7 +120,7 @@
             }
           },
           {
-            "title": "No Show",
+            "title": "No Shwow *cries* ",
             "description": "Check if the robot did not show up for the match.",
             "type": "boolean",
             "required": false,
@@ -130,10 +130,10 @@
         ]
       },
       {
-        "name": "Autonomous",
+        "name": "Autownomwous OwO",
         "fields": [
           {
-            "title": "Moved?",
+            "title": "Mowved OwO?",
             "description": "Check if the robot moved during autonomous.",
             "type": "boolean",
             "required": false,
@@ -141,7 +141,7 @@
             "defaultValue": false
           },
           {
-            "title": "Pickup Location",
+            "title": "Pwickup Lowcwation OwO",
             "type": "select",
             "required": false,
             "code": "Apl",
@@ -155,7 +155,7 @@
             "multiSelect": true
           },
           {
-            "title": "Coral L1 Scored",
+            "title": "Cowal L1 Scowed OwO",
             "description": "The number of level 1 coral scored during autonomous.",
             "type": "counter",
             "required": false,
@@ -165,7 +165,7 @@
             "step": 1
           },
           {
-            "title": "Coral L2 Scored",
+            "title": "Cowal L2 Scowed",
             "description": "The number of level 2 coral scored during autonomous.",
             "type": "counter",
             "required": false,
@@ -175,7 +175,7 @@
             "step": 1
           },
           {
-            "title": "Coral L3 Scored",
+            "title": "Cowal L3 Scowed OwO",
             "description": "The number of level 3 coral scored during autonomous.",
             "type": "counter",
             "required": false,
@@ -185,7 +185,7 @@
             "step": 1
           },
           {
-            "title": "Coral L4 Scored",
+            "title": "Cowal L4 Scowed OwO",
             "description": "The number of level 4 coral scored during autonomous.",
             "type": "counter",
             "required": false,
@@ -195,7 +195,7 @@
             "step": 1
           },
           {
-            "title": "Barge Algae Scored",
+            "title": "Bawge Algae Scowed OwO",
             "description": "The number of Algae scored in the barge during autonomous.",
             "type": "counter",
             "required": false,
@@ -205,7 +205,7 @@
             "step": 1
           },
           {
-            "title": "Processor Algae Scored",
+            "title": "Pwocessor Algae Scowed OwO",
             "description": "The number of Algae scored in the processor during autonomous.",
             "type": "counter",
             "required": false,
@@ -215,7 +215,7 @@
             "step": 1
           },
           {
-            "title": "Dislodged Algae?",
+            "title": "Diswodged Algae OwO?",
             "type": "boolean",
             "required": false,
             "code": "Ada",
@@ -224,10 +224,10 @@
         ]
       },
       {
-        "name": "Teleop",
+        "name": "Teweop OwO",
         "fields": [
           {
-            "title": "Dislodged Algae?",
+            "title": "Diswodged Algae OwO?",
             "type": "counter",
             "required": false,
             "code": "Tda",
@@ -236,7 +236,7 @@
             "step": 1
           },
           {
-            "title": "Coral Pickup Location",
+            "title": "Cowal Pwickup Lowcwation OwO",
             "type": "select",
             "required": false,
             "code": "Tpl",
@@ -250,7 +250,7 @@
             "multiSelect": true
           },
           {
-            "title": "Coral L1 Scored",
+            "title": "Cowal L1 Scowed OwO",
             "description": "The number of level 1 coral scored during autonomous.",
             "type": "counter",
             "required": false,
@@ -260,7 +260,7 @@
             "step": 1
           },
           {
-            "title": "Coral L2 Scored",
+            "title": "Cowal L2 Scowed OwO",
             "description": "The number of level 2 coral scored during autonomous.",
             "type": "counter",
             "required": false,
@@ -270,7 +270,7 @@
             "step": 1
           },
           {
-            "title": "Coral L3 Scored",
+            "title": "Cowal L3 Scowed OwO",
             "description": "The number of level 3 coral scored during autonomous.",
             "type": "counter",
             "required": false,
@@ -280,7 +280,7 @@
             "step": 1
           },
           {
-            "title": "Coral L4 Scored",
+            "title": "Cowal L4 Scowed OwO",
             "description": "The number of level 4 coral scored during autonomous.",
             "type": "counter",
             "required": false,
@@ -290,7 +290,7 @@
             "step": 1
           },
           {
-            "title": "Barge Algae Scored",
+            "title": "Bawge Algae Scowed OwO",
             "description": "The number of Algae scored in the barge during autonomous.",
             "type": "counter",
             "required": false,
@@ -300,7 +300,7 @@
             "step": 1
           },
           {
-            "title": "Processor Algae Scored",
+            "title": "Pwocessor Algae Scowed",
             "description": "The number of Algae scored in the processor during autonomous.",
             "type": "counter",
             "required": false,
@@ -310,21 +310,21 @@
             "step": 1
           },
           {
-            "title": "Played Defense?",
+            "title": "Pwayed Defwense OwO?",
             "type": "boolean",
             "required": false,
             "code": "Tpd",
             "defaultValue": false
           },
           {
-            "title": "Tipped/Fell Over?",
+            "title": "Twpped/Fewl Over OwO?",
             "type": "boolean",
             "required": false,
             "code": "Ttfo",
             "defaultValue": false
           },
           {
-            "title": "Died?",
+            "title": "Died *cries* OwO?",
             "type": "boolean",
             "required": false,
             "code": "Td",
@@ -333,10 +333,10 @@
         ]
       },
       {
-        "name": "Endgame",
+        "name": "Endgwame OwO",
         "fields": [
           {
-            "title": "End Position",
+            "title": "End Pawsitin OwO",
             "type": "select",
             "required": true,
             "code": "Eep",
@@ -352,10 +352,10 @@
         ]
       },
       {
-        "name": "Postmatch",
+        "name": "Powstmeowtch OwO",
         "fields": [
           {
-            "title": "Offense Skill",
+            "title": "Offwense Skiwl",
             "type": "range",
             "required": false,
             "code": "Pos",
@@ -365,14 +365,14 @@
             "step": 1
           },
           {
-            "title": "Played Defense?",
+            "title": "Pwayed Defwense OwO?",
             "type": "boolean",
             "required": false,
             "code": "Ppd",
             "defaultValue": false
           },
           {
-            "title": "Defense Skill",
+            "title": "Defwense Skiwl OwO",
             "type": "range",
             "required": false,
             "code": "Pdfs",
@@ -382,7 +382,7 @@
             "step": 1
           },
           {
-            "title": "Driver Skill",
+            "title": "Dwiver Skiwl OwO",
             "type": "range",
             "required": false,
             "code": "Pdvs",
@@ -392,7 +392,7 @@
             "step": 1
           },
           {
-            "title": "Robot Speed",
+            "title": "Rowbot Spweed OwO",
             "type": "range",
             "required": false,
             "code": "Prs",
@@ -402,7 +402,7 @@
             "step": 1
           },
           {
-            "title": "Comments",
+            "title": "Commwents OwO",
             "type": "text",
             "required": false,
             "code": "Pco",
