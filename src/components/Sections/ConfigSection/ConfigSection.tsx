@@ -20,10 +20,10 @@ export function ConfigSection() {
   const onCancel = () => {
     setShowModal(false);
   };
-  const OwoMatchReset = () => {
-    onConfirm();
-    resetToMatchConfigOwO();
-  }
+  // const OwoMatchReset = () => {
+  //   onConfirm();
+  //   resetToMatchConfigOwO();
+  // }
   return (
     <Section title='Change Form'>
       <div className="flex flex-col justify-center items-center gap-4">
@@ -76,13 +76,13 @@ export function ConfigSection() {
         >
         <Modal show={showModal} onDismiss={onCancel}>
           <div className='p-4'>
-            <h2 className='font-semibold text-3xl text-primary text-center font-rhr-ns tracking-wider'></h2>
+            <h2 className='font-semibold text-3xl text-primary text-center font-rhr-ns tracking-wider color: black'></h2>
             <p>Forbidden Configs</p>
             <div className='flex justify-end gap-2 mt-4'>
-              <Button variant={"destructive"} onClick={() => OwoMatchReset()} className="w-full sm:w-auto">
+              <Button variant={"destructive"} onClick={() => resetToMatchConfigOwO()} className="w-full sm:w-auto">
                 Match OwO 
               </Button>
-              <Button variant={"outline"} onClick={() => onCancel()} className="w-full sm:w-auto">
+              <Button variant={"outline"} onClick={() => onCancel} className="w-full sm:w-auto">
                 Close
               </Button>
             </div>
