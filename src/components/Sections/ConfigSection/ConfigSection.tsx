@@ -13,10 +13,7 @@ import { Modal } from '@/components/core/Modal';
 export function ConfigSection() {
   // const formData = useQRScoutState(state => state.formData);
   const [showModal, setShowModal] = useState(false);
-  const onConfirm = () => {
-      setShowModal(false);
-    };
-  
+
   const onCancel = () => {
     setShowModal(false);
   };
