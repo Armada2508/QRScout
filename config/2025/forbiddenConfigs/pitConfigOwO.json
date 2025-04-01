@@ -88,6 +88,15 @@
                 "code": "silly",
                 "defaultValue": "",
                 "formResetBehavior": "reset"
+            },
+            {
+                "title": "Tweam Name",
+                "description": "The name of thier team (NOT THE NUMBER)",
+                "type": "text",
+                "required": true,
+                "code": "billy",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
             }
         ]
     },
