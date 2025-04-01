@@ -4,19 +4,28 @@ import { Clock } from 'lucide-react';
 import { Section } from '../../core/Section';
 import { ThemeSelector } from './ThemeSelector';
 import { LandPlot, Tv } from 'lucide-react';
-import { useState } from 'react';
-import { Modal } from '@/components/core/Modal';
+// import { useState } from 'react';
+// import { Modal } from '@/components/core/Modal';
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogTitle,
+  DialogTrigger,
+} from '../../ui/dialog';
 // import { getCycleConfig, getMatchConfig, getPitConfig } from "@/store/store"
 
+export interface ForiddenConfigsProps {
+  disabled?: boolean;
+}
 
-
-export function ConfigSection() {
+export function ConfigSection(props: ForiddenConfigsProps) {
   // const formData = useQRScoutState(state => state.formData);
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
 
-  const onCancel = () => {
-    setShowModal(false);
-  };
+  // const onCancel = () => {
+  //   setShowModal(false);
+  // };
   // const OwoMatchReset = () => {
   //   onConfirm();
   //   resetToMatchConfigOwO();
@@ -67,7 +76,25 @@ export function ConfigSection() {
           <LandPlot className='h-5, w-5'/>
           Pit
         </Button>
-        <Button
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button disabled={props.disabled}>
+
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogTitle className="text-3xl text-primary text-center font-rhr-ns tracking-wider ">
+              Forbidden Configs
+            </DialogTitle>
+            <Button onClick={() => resetToMatchConfigOwO} size={'sm'}>
+              MatchOwO
+            </Button>
+            <DialogFooter>
+
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+        {/* <Button
         variant={"ghost"}
         onClick={() => setShowModal(true)}
         >
@@ -83,17 +110,10 @@ export function ConfigSection() {
                 Close
               </Button>
             </div>
-
-
-
           </div>
-
-
         </Modal>
-
-
-
-        </Button>
+        </Button> */}
+        
         <ThemeSelector />
       </div>
     </Section>
