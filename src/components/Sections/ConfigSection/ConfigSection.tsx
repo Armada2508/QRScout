@@ -86,8 +86,8 @@ export function ConfigSection(props: ForiddenConfigsProps) {
             <DialogTitle className="text-3xl text-primary text-center font-rhr-ns tracking-wider ">
               Forbidden Configs
             </DialogTitle>
-            <div className='items-center'>
-              <Button onClick={() => resetToMatchConfigOwO()} variant={"secondary"} className='h-5, w-20 text-center'>
+            <div className='items-center gap-2 justify-center'>
+              <Button onClick={() => resetToMatchConfigOwO()} variant={"secondary"} className='h-5, w-20 text-center '>
               Match OwO
               </Button>
               <Button onClick={() => resetToPitOwOConfig()} variant={"secondary"} className='h-5, w-20 text-center'>
