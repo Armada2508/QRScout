@@ -78,7 +78,7 @@ export function ConfigSection(props: ForiddenConfigsProps) {
         </Button>
         <Dialog>
           <DialogTrigger asChild>
-            <Button disabled={props.disabled}>
+            <Button disabled={props.disabled} variant={"ghost"}>
 
             </Button>
           </DialogTrigger>
@@ -86,7 +86,7 @@ export function ConfigSection(props: ForiddenConfigsProps) {
             <DialogTitle className="text-3xl text-primary text-center font-rhr-ns tracking-wider ">
               Forbidden Configs
             </DialogTitle>
-            <Button onClick={() => resetToMatchConfigOwO} size={'sm'}>
+            <Button onClick={() => resetToMatchConfigOwO} variant={"secondary"}>
               MatchOwO
             </Button>
             <DialogFooter>
