@@ -1,31 +1,49 @@
-import { QRModal } from '@/components/QR';
-import { useMemo } from 'react';
-import { useQRScoutState } from '../../../store/store';
-import { Section } from '../../core/Section';
-import { ResetButton } from './ResetButton';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { ListRestart } from 'lucide-react';
+import { resetFields } from '../../../store/store';
+import { Modal } from '@/components/core/Modal';
 
-export function CommitAndResetSection() {
-  const formData = useQRScoutState(state => state.formData);
-  const fieldValues = useQRScoutState(state => state.fieldValues);
+export type ResetButtonProps = {
+  disabled?: boolean;
+};
 
-  const requiredFields = useMemo(() => {
-    return formData.sections
-      .map(s => s.fields)
-      .flat()
-      .filter(f => f.required)
-      .map(f => f.code);
-  }, [formData]);
+export function ResetButton(props: ResetButtonProps) {
+  const [showModal, setShowModal] = useState(false);
 
-  const missingRequiredFields = useMemo(() => {
-    return fieldValues
-      .filter(f => requiredFields.includes(f.code))
-      .some(f => f.value === undefined || f.value === '' || f.value === null);
-  }, [formData, fieldValues]);
+  const onConfirm = () => {
+    resetFields();
+    setShowModal(false);
+  };
+
+  const onCancel = () => {
+    setShowModal(false);
+  };
 
   return (
-    <Section>
-      <QRModal disabled={missingRequiredFields} />
-      <ResetButton />
-    </Section>
+    <>
+      <Button
+        variant="destructive"
+        onClick={() => setShowModal(true)}
+        disabled={props.disabled}
+      >
+        <ListRestart className="h-5 w-5" />
+        Reset Form
+      </Button>
+      <Modal show={showModal} onDismiss={onCancel}>
+        <div className="p-4">
+          <h2 className="font-semibold text-3xl text-primary text-center font-rhr-ns tracking-wider">Confirm Reset</h2>
+          <p>Are you sure you want to reset the form?</p>
+          <div className="flex justify-end gap-2 mt-4">
+            <Button variant="outline" onClick={onCancel} className="w-full sm:w-auto">
+              No
+            </Button>
+            <Button variant="destructive" onClick={onConfirm} className="w-full sm:w-auto">
+              Yes
+            </Button>
+          </div>
+        </div>
+      </Modal>
+    </>
   );
 }

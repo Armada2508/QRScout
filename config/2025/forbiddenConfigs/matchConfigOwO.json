@@ -1,0 +1,417 @@
+{
+    "title": "QRScout",
+    "page_title": "Weefswape OwO",
+    "delimiter": "\t",
+    "teamNumber": 2713,
+    "theme": {
+      "light": {
+        "background": "307 98% 85%",
+        "foreground": "0 0% 98%",
+        "card": "0 0% 3.9%",
+        "card_foreground": "0 0% 98%",
+        "popover": "0 0% 3.9%",
+        "popover_foreground": "0 0% 98%",
+        "primary": "181 100% 50%",
+        "primary_foreground": "0 50% 0%",
+        "secondary": "181 100% 50%",
+        "secondary_foreground": "0 50% 0%",
+        "muted": "0 0% 14.9%",
+        "muted_foreground": "0 0% 63.9%",
+        "accent": "0 0% 14.9%",
+        "accent_foreground": "0 0% 98%",
+        "destructive": "181 100% 50%",
+        "destructive_foreground": "0 50% 0%",
+        "border": "0 0% 14.9%",
+        "input": "0 0% 14.9%",
+        "ring": "354.44 71.3% 47.9%",
+        "chart_1": "220 70% 50%",
+        "chart_2": "160 60% 45%",
+        "chart_3": "30 80% 55%",
+        "chart_4": "280 65% 60%",
+        "chart_5": "340 75% 55%"
+      },
+      "dark": {
+        "background": "307 98% 85%",
+        "foreground": "0 0% 98%",
+        "card": "0 0% 3.9%",
+        "card_foreground": "0 0% 98%",
+        "popover": "0 0% 3.9%",
+        "popover_foreground": "0 0% 98%",
+        "primary": "181 100% 50%",
+        "primary_foreground": "0 50% 0%",
+        "secondary": "181 100% 50%",
+        "secondary_foreground": "0 50% 0%",
+        "muted": "0 0% 14.9%",
+        "muted_foreground": "0 0% 63.9%",
+        "accent": "0 0% 14.9%",
+        "accent_foreground": "0 0% 98%",
+        "destructive": "181 100% 50%",
+        "destructive_foreground": "0 50% 0%",
+        "border": "0 0% 14.9%",
+        "input": "0 0% 14.9%",
+        "ring": "354.44 71.3% 47.9%",
+        "chart_1": "220 70% 50%",
+        "chart_2": "160 60% 45%",
+        "chart_3": "30 80% 55%",
+        "chart_4": "280 65% 60%",
+        "chart_5": "340 75% 55%"
+        }
+    },
+    "sections": [
+      {
+        "name": "Pwemeowch OwO",
+        "fields": [
+          {
+            "title": "Scouter Initials",
+            "description": "Enter the initials of the scouter.",
+            "type": "text",
+            "required": true,
+            "code": "scouter",
+            "defaultValue": "",
+            "formResetBehavior": "preserve"
+          },
+          {
+            "title": "Match Number",
+            "description": "Enter the match number.",
+            "type": "number",
+            "required": true,
+            "code": "match",
+            "defaultValue": 1,
+            "formResetBehavior": "increment"
+          },
+          {
+            "title": "Robot",
+            "description": "The robot you are scouting this match, based on driver station position.",
+            "type": "select",
+            "required": true,
+            "code": "robot",
+            "defaultValue": "R1",
+            "choices": {
+              "R1": "Red 1",
+              "R2": "Red 2",
+              "R3": "Red 3",
+              "B1": "Blue 1",
+              "B2": "Blue 2",
+              "B3": "Blue 3"
+            },
+            "formResetBehavior": "preserve"
+          },
+          {
+            "title": "Team Number",
+            "description": "The team number of the robot you're scouting.",
+            "type": "number",
+            "required": true,
+            "code": "team",
+            "defaultValue": 0,
+            "min": 0,
+            "max": 19999
+          },
+          {
+            "title": "Starting Position",
+            "description": "The starting position of the robot.",
+            "type": "select",
+            "required": true,
+            "code": "sp",
+            "defaultValue": "",
+            "choices": {
+              "R1": "Top",
+              "R2": "Middle",
+              "R3": "Bottom"
+            }
+          },
+          {
+            "title": "No Show",
+            "description": "Check if the robot did not show up for the match.",
+            "type": "boolean",
+            "required": false,
+            "code": "ns",
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "Autonomous",
+        "fields": [
+          {
+            "title": "Moved?",
+            "description": "Check if the robot moved during autonomous.",
+            "type": "boolean",
+            "required": false,
+            "code": "m",
+            "defaultValue": false
+          },
+          {
+            "title": "Pickup Location",
+            "type": "select",
+            "required": false,
+            "code": "Apl",
+            "defaultValue": "",
+            "choices": {
+              "1": "None",
+              "2": "Ground",
+              "3": "Human Player",
+              "4": "Both"
+            },
+            "multiSelect": true
+          },
+          {
+            "title": "Coral L1 Scored",
+            "description": "The number of level 1 coral scored during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Ac1s",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Coral L2 Scored",
+            "description": "The number of level 2 coral scored during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Ac2s",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Coral L3 Scored",
+            "description": "The number of level 3 coral scored during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Ac3s",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Coral L4 Scored",
+            "description": "The number of level 4 coral scored during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Ac4s",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Barge Algae Scored",
+            "description": "The number of Algae scored in the barge during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Abas",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Processor Algae Scored",
+            "description": "The number of Algae scored in the processor during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Apas",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Dislodged Algae?",
+            "type": "boolean",
+            "required": false,
+            "code": "Ada",
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "Teleop",
+        "fields": [
+          {
+            "title": "Dislodged Algae?",
+            "type": "counter",
+            "required": false,
+            "code": "Tda",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Coral Pickup Location",
+            "type": "select",
+            "required": false,
+            "code": "Tpl",
+            "defaultValue": "",
+            "choices": {
+              "1": "None",
+              "2": "Ground",
+              "3": "Human Player",
+              "4": "Both"
+            },
+            "multiSelect": true
+          },
+          {
+            "title": "Coral L1 Scored",
+            "description": "The number of level 1 coral scored during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Tc1s",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Coral L2 Scored",
+            "description": "The number of level 2 coral scored during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Tc2s",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Coral L3 Scored",
+            "description": "The number of level 3 coral scored during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Tc3s",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Coral L4 Scored",
+            "description": "The number of level 4 coral scored during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Tc4s",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Barge Algae Scored",
+            "description": "The number of Algae scored in the barge during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Tbas",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Processor Algae Scored",
+            "description": "The number of Algae scored in the processor during autonomous.",
+            "type": "counter",
+            "required": false,
+            "code": "Tpas",
+            "defaultValue": 0,
+            "min": 0,
+            "step": 1
+          },
+          {
+            "title": "Played Defense?",
+            "type": "boolean",
+            "required": false,
+            "code": "Tpd",
+            "defaultValue": false
+          },
+          {
+            "title": "Tipped/Fell Over?",
+            "type": "boolean",
+            "required": false,
+            "code": "Ttfo",
+            "defaultValue": false
+          },
+          {
+            "title": "Died?",
+            "type": "boolean",
+            "required": false,
+            "code": "Td",
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "name": "Endgame",
+        "fields": [
+          {
+            "title": "End Position",
+            "type": "select",
+            "required": true,
+            "code": "Eep",
+            "defaultValue": "No",
+            "choices": {
+              "No": "Not Parked",
+              "P": "Parked",
+              "Sc": "Shallow Climb",
+              "Dc": "Deep Climb",
+              "Fc": "Failed Climb"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Postmatch",
+        "fields": [
+          {
+            "title": "Offense Skill",
+            "type": "range",
+            "required": false,
+            "code": "Pos",
+            "defaultValue": 3,
+            "min": 1,
+            "max": 5,
+            "step": 1
+          },
+          {
+            "title": "Played Defense?",
+            "type": "boolean",
+            "required": false,
+            "code": "Ppd",
+            "defaultValue": false
+          },
+          {
+            "title": "Defense Skill",
+            "type": "range",
+            "required": false,
+            "code": "Pdfs",
+            "defaultValue": 3,
+            "min": 0,
+            "max": 5,
+            "step": 1
+          },
+          {
+            "title": "Driver Skill",
+            "type": "range",
+            "required": false,
+            "code": "Pdvs",
+            "defaultValue": 3,
+            "min": 1,
+            "max": 5,
+            "step": 1
+          },
+          {
+            "title": "Robot Speed",
+            "type": "range",
+            "required": false,
+            "code": "Prs",
+            "defaultValue": 3,
+            "min": 1,
+            "max": 5,
+            "step": 1
+          },
+          {
+            "title": "Comments",
+            "type": "text",
+            "required": false,
+            "code": "Pco",
+            "defaultValue": "",
+            "min": 0,
+            "max": 50
+          }
+        ]
+      } 
+    ]
+  }
+  
