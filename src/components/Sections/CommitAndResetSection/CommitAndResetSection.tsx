@@ -1,49 +1,31 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { ListRestart } from 'lucide-react';
-import { resetFields } from '../../../store/store';
-import { Modal } from '@/components/core/Modal';
+import { QRModal } from '@/components/QR';
+import { useMemo } from 'react';
+import { useQRScoutState } from '../../../store/store';
+import { Section } from '../../core/Section';
+import { ResetButton } from './ResetButton';
 
-export type ResetButtonProps = {
-  disabled?: boolean;
-};
+export function CommitAndResetSection() {
+  const formData = useQRScoutState(state => state.formData);
+  const fieldValues = useQRScoutState(state => state.fieldValues);
 
-export function ResetButton(props: ResetButtonProps) {
-  const [showModal, setShowModal] = useState(false);
+  const requiredFields = useMemo(() => {
+    return formData.sections
+      .map(s => s.fields)
+      .flat()
+      .filter(f => f.required)
+      .map(f => f.code);
+  }, [formData]);
 
-  const onConfirm = () => {
-    resetFields();
-    setShowModal(false);
-  };
-
-  const onCancel = () => {
-    setShowModal(false);
-  };
+  const missingRequiredFields = useMemo(() => {
+    return fieldValues
+      .filter(f => requiredFields.includes(f.code))
+      .some(f => f.value === undefined || f.value === '' || f.value === null);
+  }, [formData, fieldValues]);
 
   return (
-    <>
-      <Button
-        variant="destructive"
-        onClick={() => setShowModal(true)}
-        disabled={props.disabled}
-      >
-        <ListRestart className="h-5 w-5" />
-        Reset Form
-      </Button>
-      <Modal show={showModal} onDismiss={onCancel}>
-        <div className="p-4">
-          <h2 className="font-semibold text-3xl text-primary text-center font-rhr-ns tracking-wider">Confirm Reset</h2>
-          <p>Are you sure you want to reset the form?</p>
-          <div className="flex justify-end gap-2 mt-4">
-            <Button variant="outline" onClick={onCancel} className="w-full sm:w-auto">
-              No
-            </Button>
-            <Button variant="destructive" onClick={onConfirm} className="w-full sm:w-auto">
-              Yes
-            </Button>
-          </div>
-        </div>
-      </Modal>
-    </>
+    <Section>
+      <QRModal disabled={missingRequiredFields} />
+      <ResetButton />
+    </Section>
   );
 }
