@@ -365,13 +365,6 @@
             "step": 1
           },
           {
-            "title": "Pwayed Defwense OwO?",
-            "type": "boolean",
-            "required": false,
-            "code": "Ppd",
-            "defaultValue": false
-          },
-          {
             "title": "Defwense Skiwl OwO",
             "type": "range",
             "required": false,
