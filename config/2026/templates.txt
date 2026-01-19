@@ -1,0 +1,51 @@
+{
+    "name": "yes/no template",
+    "description": "blah blah blah",
+    "type": "boolean",
+    "required": false,
+    "code": "e",
+    "defaultValue": false
+}
+{
+    "name": "multi-choice template",
+    "description": "blah blah blah",
+    "type": "select",
+    "code": "e",
+    "defaultValue": "",
+    "choices": {
+        "1": " ",
+        "2": " ",
+        "3": " ",
+        "4": " "
+    },
+    "multiSelect": false
+}
+{
+    "name": "counter template",
+    "description" : "blah blah blah",
+    "type": "counter",
+    "required": false,
+    "code": "e",
+    "defaultValue": 0,
+    "min": 0,
+    "step": 1
+}
+{
+    "name": "range template",
+    "description" : "blah blah blah",
+    "type": "range",
+    "required": false,
+    "code": "e",
+    "defaultValue": 0,
+    "min": 0,
+    "max": 5,
+    "step": 1
+}
+{
+    "title": "Cycle template",
+    "description": "blah blah blah",
+    "type": "timer",
+    "required": false,
+    "code": "timer",
+    "defaultValue": 0
+},

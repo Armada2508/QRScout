@@ -1,7 +1,9 @@
 import { produce } from 'immer';
 import { cloneDeep } from 'lodash';
 import configJson from '../../config/2025/config.json';
+import matchConfigJson from '../../config/2026/matchConfig.json'
 import cycleConfigJson from '../../config/2025/cycleConfig.json'
+// import pitConfigJson2026 from '../../config/2026/pitConfig.json'
 import pitConfigJson from '../../config/2025/pitConfig.json'
 import matchConfigOwo from '../../config/2025/forbiddenConfigs/matchConfigOwO.json'
 import pitConfigOwO from "../../config/2025/forbiddenConfigs/pitConfigOwO.json"
@@ -39,7 +41,7 @@ export function getPitConfig(): Config {
   return config.data;
 }
 export function getMatchConfig(): Config {
-  const config = configSchema.safeParse(configJson);
+  const config = configSchema.safeParse(matchConfigJson);
   if (!config.success) {
     console.error(config.error);
     throw new Error('Invalid config schema');
