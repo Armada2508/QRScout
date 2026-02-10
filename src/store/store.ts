@@ -1,10 +1,10 @@
 import { produce } from 'immer';
 import { cloneDeep } from 'lodash';
-// import configJson from '../../config/2025/config.json';
+// import configJson from '../../config/2026/config.json';
 import matchConfigJson from '../../config/2026/matchConfig.json'
 import cycleConfigJson from '../../config/2025/cycleConfig.json'
 // import pitConfigJson2026 from '../../config/2026/pitConfig.json'
-import pitConfigJson from '../../config/2025/pitConfig.json'
+import pitConfigJson from '../../config/2026/pitConfig.json'
 import matchConfigOwo from '../../config/2025/forbiddenConfigs/matchConfigOwO.json'
 import pitConfigOwO from "../../config/2025/forbiddenConfigs/pitConfigOwO.json"
 import {
@@ -24,6 +24,9 @@ type Result<T> = { success: true; data: T } | { success: false; error: Error };
 //   }
 //   return config.data;
 // }
+
+export var resetNum: number = 0
+
 export function getCycleConfig(): Config {
   const config = configSchema.safeParse(cycleConfigJson);
   if (!config.success) {
@@ -178,6 +181,7 @@ export function resetFields() {
 
 export function forceResetFields() {
   window.dispatchEvent(new CustomEvent('forceResetFields', { detail: 'forceReset' }));
+  resetNum = resetNum + 1
 }
 
 export function setFormData(config: Config) {

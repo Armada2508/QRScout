@@ -1,0 +1,212 @@
+{
+"title": "QRScout",
+  "page_title": "Rebuilt",
+  "delimiter": "\t",
+  "teamNumber": 2713,
+  "theme": {
+    "light": {
+      "background": "0 0% 3.9%",
+      "foreground": "0 0% 98%",
+      "card": "0 0% 3.9%",
+      "card_foreground": "0 0% 98%",
+      "popover": "0 0% 3.9%",
+      "popover_foreground": "0 0% 98%",
+      "primary": "354.44 71.3% 47.9%",
+      "primary_foreground": "0 85.7% 97.3%",
+      "secondary": "0 0% 14.9%",
+      "secondary_foreground": "0 0% 98%",
+      "muted": "0 0% 14.9%",
+      "muted_foreground": "0 0% 63.9%",
+      "accent": "0 0% 14.9%",
+      "accent_foreground": "0 0% 98%",
+      "destructive": "0 62.8% 30.6%",
+      "destructive_foreground": "0 0% 98%",
+      "border": "0 0% 14.9%",
+      "input": "0 0% 14.9%",
+      "ring": "354.44 71.3% 47.9%",
+      "chart_1": "220 70% 50%",
+      "chart_2": "160 60% 45%",
+      "chart_3": "30 80% 55%",
+      "chart_4": "280 65% 60%",
+      "chart_5": "340 75% 55%"
+    },
+    "dark": {
+      "background": "0 0% 3.9%",
+      "foreground": "0 0% 98%",
+      "card": "0 0% 3.9%",
+      "card_foreground": "0 0% 98%",
+      "popover": "0 0% 3.9%",
+      "popover_foreground": "0 0% 98%",
+      "primary": "354.44 71.3% 47.9%",
+      "primary_foreground": "0 85.7% 97.3%",
+      "secondary": "0 0% 14.9%",
+      "secondary_foreground": "0 0% 98%",
+      "muted": "0 0% 14.9%",
+      "muted_foreground": "0 0% 63.9%",
+      "accent": "0 0% 14.9%",
+      "accent_foreground": "0 0% 98%",
+      "destructive": "0 62.8% 30.6%",
+      "destructive_foreground": "0 0% 98%",
+      "border": "0 0% 14.9%",
+      "input": "0 0% 14.9%",
+      "ring": "354.44 71.3% 47.9%",
+      "chart_1": "220 70% 50%",
+      "chart_2": "160 60% 45%",
+      "chart_3": "30 80% 55%",
+      "chart_4": "280 65% 60%",
+      "chart_5": "340 75% 55%"
+    }
+  },
+  "sections": [
+    {
+      "name": "Prematch",
+      "fields": [
+        {
+          "title": "Scouter Initials",
+          "description": "Enter the initials of the scouter.",
+          "type": "text",
+          "required": true,
+          "code": "scouter",
+          "defaultValue": "",
+          "formResetBehavior": "preserve"
+        },
+        {
+          "title": "Match Number",
+          "description": "Enter the match number.",
+          "type": "number",
+          "required": true,
+          "code": "match",
+          "defaultValue": 1,
+          "formResetBehavior": "increment"
+        },
+        {
+          "title": "Robot",
+          "description": "The robot you are scouting this match, based on driver station position.",
+          "type": "select",
+          "required": true,
+          "code": "robot",
+          "defaultValue": "R1",
+          "choices": {
+            "R1": "Red 1",
+            "R2": "Red 2",
+            "R3": "Red 3",
+            "B1": "Blue 1",
+            "B2": "Blue 2",
+            "B3": "Blue 3"
+          },
+          "formResetBehavior": "preserve"
+        },
+        {
+          "title": "Team Number",
+          "description": "The team number of the robot you're scouting.",
+          "type": "number",
+          "required": true,
+          "code": "team",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 19999
+        },
+        {
+          "title": "Starting Position",
+          "description": "The starting position of the robot.",
+          "type": "select",
+          "required": true,
+          "code": "sp",
+          "defaultValue": "",
+          "choices": {
+            "R1": "Top",
+            "R2": "Middle",
+            "R3": "Bottom"
+          }
+        },
+        {
+          "title": "No Show",
+          "description": "Check if the robot did not show up for the match.",
+          "type": "boolean",
+          "required": false,
+          "code": "ns",
+          "defaultValue": false
+        }
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "fields": [
+          {
+              "title": "Shoot into Hub?",
+              "description": "Can the robot shoot into a hub?",
+              "type": "boolean",
+              "required": false,
+              "code": "SIH",
+              "defaultValue": false
+          },
+          {
+              "title": "Fuel Pick-Up locations?",
+              "description": "If the robot can pick up fuel and where.",
+              "type": "select",
+              "code": "FPU",
+              "defaultValue": "",
+              "required": false,
+              "choices": {
+                  "1": "Cannot Pick-Up fuel",
+                  "2": "Depot",
+                  "3": "Center",
+                  "4": "Outpost"
+              },
+              "multiSelect": true
+          },
+          {
+              "title": "Accuracy of Hub Shots",
+              "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 2 - Almost every shot went in.",
+              "type": "range",
+              "required": false,
+              "code": "AHS",
+              "defaultValue": 0,
+              "min": 1,
+              "max": 5,
+              "step": 1
+          },
+          {
+              "title": "Climbed",
+              "description": "Did the robot climb during the auto phase?",
+              "type": "boolean",
+              "required": false,
+              "code": "CL",
+              "defaultValue": false
+          },
+          {
+              "title": "Malfunctioned/Died?",
+              "description": "Did the robot malfunctio or die during the auto phase?",
+              "type": "boolean",
+              "required": false,
+              "code": "MD",
+              "defaultValue": false
+          }
+      ]
+    },
+    {
+      "name": "Active",
+        "fields": [
+            
+        ]
+    },
+    {
+      "name": "Inactive",
+        "fields": [
+            
+        ]    
+    },
+    {
+        "name": "Endgame",
+        "fields": [
+            
+        ]
+    },
+    {
+        "name": "Postmatch",
+        "fields": [
+            
+        ]
+    }
+  ]
+}

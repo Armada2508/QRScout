@@ -1,8 +1,8 @@
 {
-    "title": "QRScout",
-  "page_title": "Reefscape",
+"title": "QRScout",
+  "page_title": "Rebuilt",
   "delimiter": "\t",
-  "teamNumber": 2508,
+  "teamNumber": 2713,
   "theme": {
     "light": {
       "background": "0 0% 3.9%",
@@ -59,7 +59,7 @@
   },
   "sections": [
     {
-        "name": "Prematch",
+      "name": "Prematch",
       "fields": [
         {
           "title": "Scouter Initials",
@@ -130,71 +130,65 @@
       ]
     },
     {
-        "name": "Autonomous",
-        "fields": [
-            {
-                "name": "Shoot into Hub?",
-                "description": "Can the robot shoot into a hub?",
-                "type": "boolean",
-                "required": false,
-                "code": "SIH",
-                "defaultValue": false
-            },
-            {
-                "name": "Fuel Pick-Up locations?",
-                "description": "If the robot can pick up fuel and where.",
-                "type": "select",
-                "code": "FPU",
-                "defaultValue": " ",
-                "choices": {
-                    "1": "Cannot Pick-Up fuel",
-                    "2": "Depot",
-                    "3": "Center",
-                    "4": "Outpost"
-                },
-                "multiSelect": true
-            },
-            {
-                "name": "Accuracy of Hub Shots",
-                "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 2 - Almost every shot went in.",
-                "type": "range",
-                "required": false,
-                "code": "AHS",
-                "defaultValue": 0,
-                "min": 1,
-                "max": 5,
-                "step": 1
-            },
-            {
-                "name": "Climbed",
-                "description": "Did the robot climb during the auto phase?",
-                "type": "boolean",
-                "required": false,
-                "code": "CL",
-                "defaultValue": false
-            },
-            {
-                "name": "Malfunctioned/Died?",
-                "description": "Did the robot malfunctio or die during the auto phase?",
-                "type": "boolean",
-                "required": false,
-                "code": "MD",
-                "defaultValue": false
-            }
-        ]
-
+      "name": "Autonomous",
+      "fields": [
+          {
+              "title": "Shoot into Hub?",
+              "description": "Can the robot shoot into a hub?",
+              "type": "boolean",
+              "required": false,
+              "code": "SIH",
+              "defaultValue": false
+          },
+          {
+              "title": "Fuel Pick-Up locations?",
+              "description": "If the robot can pick up fuel and where.",
+              "type": "select",
+              "code": "FPU",
+              "defaultValue": "",
+              "required": false,
+              "choices": {
+                  "1": "Cannot Pick-Up fuel",
+                  "2": "Depot",
+                  "3": "Center",
+                  "4": "Outpost"
+              },
+              "multiSelect": true
+          },
+          {
+              "title": "Accuracy of Hub Shots",
+              "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 2 - Almost every shot went in.",
+              "type": "range",
+              "required": false,
+              "code": "AHS",
+              "defaultValue": 0,
+              "min": 1,
+              "max": 5,
+              "step": 1
+          },
+          {
+              "title": "Climbed",
+              "description": "Did the robot climb during the auto phase?",
+              "type": "boolean",
+              "required": false,
+              "code": "CL",
+              "defaultValue": false
+          },
+          {
+              "title": "Malfunctioned/Died?",
+              "description": "Did the robot malfunctio or die during the auto phase?",
+              "type": "boolean",
+              "required": false,
+              "code": "MD",
+              "defaultValue": false
+          }
+      ]
     },
     {
-        "name": "Transition",
-        "fields": [
-
-        ]
-    },
-    {
-        "name": "Active",
+      "name": "Active",
         "fields": [
             {
-                "name": "Shoot?",
+                "title": "Shoot?",
                 "description": "Can the robot shoot fuel?",
                 "type": "boolean",
                 "required": false,
@@ -202,7 +196,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Shoot while moving?",
+                "title": "Shoot while moving?",
                 "description": "Can the robot shoot fuel into a hub while it's moving?",
                 "type": "boolean",
                 "required": false,
@@ -210,7 +204,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Accuracy of Hub Shots",
+                "title": "Accuracy of Hub Shots",
                 "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 2 - Almost every shot went in.",
                 "type": "range",
                 "required": false,
@@ -221,7 +215,7 @@
                 "step": 1
             },
             {
-                "name": "Human Player Scores",
+                "title": "Human Player Scores",
                 "description" : "# of times a human player scored points by throwing fuel into the hub.",
                 "type": "counter",
                 "required": false,
@@ -231,7 +225,7 @@
                 "step": 1
             },
             {
-                "name": "Human Player Shots Missed",
+                "title": "Human Player Shots Missed",
                 "description" : "# of shots a human player missed",
                 "type": "counter",
                 "required": false,
@@ -241,7 +235,7 @@
                 "step": 1
             },
             {
-                "name": "Feed Fuel to Outpost?",
+                "title": "Feed Fuel to Outpost?",
                 "description": "Is the robot able to feed fuel into an outpost?",
                 "type": "boolean",
                 "required": false,
@@ -249,7 +243,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Malfunctioned/Died?",
+                "title": "Malfunctioned/Died?",
                 "description": "Did the robot malfunction or die during the auto phase?",
                 "type": "boolean",
                 "required": false,
@@ -257,7 +251,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Defense?",
+                "title": "Defense?",
                 "description": "Did the robot purposely play defense at all during the match?",
                 "type": "boolean",
                 "required": false,
@@ -265,7 +259,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Support?",
+                "title": "Support?",
                 "description": "idk maybe Chris knows something",
                 "type": "boolean",
                 "required": false,
@@ -275,10 +269,10 @@
         ]
     },
     {
-        "name": "Inactive",
+      "name": "Inactive",
         "fields": [
             {
-                "name": "Passed Fuel?",
+                "title": "Passed Fuel?",
                 "description": "idk",
                 "type": "boolean",
                 "required": false,
@@ -286,7 +280,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Passing Fuel Effectiveness",
+                "title": "Passing Fuel Effectiveness",
                 "description" : "Alan, please add details",
                 "type": "range",
                 "required": false,
@@ -297,7 +291,7 @@
                 "step": 1
             },
             {
-                "name": "Shoot while moving?",
+                "title": "Shoot while moving?",
                 "description": "Can the robot shoot fuel into a hub while it's moving?",
                 "type": "boolean",
                 "required": false,
@@ -305,7 +299,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Defense?",
+                "title": "Defense?",
                 "description": "Did the robot purposely play defense at all during an inactive phase?",
                 "type": "boolean",
                 "required": false,
@@ -313,20 +307,20 @@
                 "defaultValue": false
             },
             {
-                "name": "Steal Fuel?",
+                "title": "Steal Fuel?",
                 "description": "Did the robot manage to steal fuel from other teams?",
                 "type": "boolean",
                 "required": false,
                 "code": "SF",
                 "defaultValue": false
             }
-        ]
+        ]    
     },
     {
         "name": "Endgame",
         "fields": [
             {
-                "name": "Climbed?",
+                "title": "Climbed?",
                 "description": "Did the robot manage to climb at all?",
                 "type": "boolean",
                 "required": false,
@@ -334,7 +328,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Level Climbed?",
+                "title": "Level Climbed?",
                 "description" : "What was the highest level climbed?",
                 "type": "counter",
                 "required": false,
@@ -353,10 +347,11 @@
                 "defaultValue": 0
             },
             {
-                "name": "Climb Location",
+                "title": "Climb Location",
                 "description": "What space the robot climbed on on the tower.",
                 "type": "select",
                 "code": "e",
+                "required": false,
                 "defaultValue": "",
                 "choices": {
                     "1": "Left Slide",
@@ -371,11 +366,12 @@
         "name": "Postmatch",
         "fields": [
             {
-                "name": "Fuel Storage",
+                "title": "Fuel Storage",
                 "description": "How much fuel the robot can storage.",
                 "type": "select",
                 "code": "e",
                 "defaultValue": "",
+                "required": false,
                 "choices": {
                     "1": "None",
                     "2": "A Little",
@@ -385,7 +381,7 @@
                 "multiSelect": false
             },
             {
-                "name": "Defense",
+                "title": "Defense",
                 "description" : "How well did the team play defense?",
                 "type": "range",
                 "required": false,
@@ -396,7 +392,7 @@
                 "step": 1
             },
             {
-                "name": "Offense",
+                "title": "Offense",
                 "description" : "How well did the team play offense?",
                 "type": "range",
                 "required": false,
@@ -407,7 +403,7 @@
                 "step": 1
             },
             {
-                "name": "Speed",
+                "title": "Speed",
                 "description" : "How fast was the robot overall?",
                 "type": "range",
                 "required": false,
@@ -418,7 +414,7 @@
                 "step": 1
             },
             {
-                "name": "Malfunction?",
+                "title": "Malfunction?",
                 "description": "Did the robot malfunction?",
                 "type": "boolean",
                 "required": false,
@@ -426,7 +422,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Any Penalties?",
+                "title": "Any Penalties?",
                 "description": " ",
                 "type": "boolean",
                 "required": false,
@@ -434,7 +430,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Damaged?",
+                "title": "Damaged?",
                 "description": " ",
                 "type": "boolean",
                 "required": false,
@@ -442,7 +438,7 @@
                 "defaultValue": false
             },
             {
-                "name": "Died?",
+                "title": "Died?",
                 "description": " ",
                 "type": "boolean",
                 "required": false,
@@ -450,14 +446,16 @@
                 "defaultValue": false
             },
             {
-                "name": "Additional Notes?",
+                "title": "Additional Notes?",
                 "description": "Any additional things you think would be nice to make note of on the team/robot. PRETEND AS IF THE TEAM WILL SEE THIS.",
                 "type": "text",
                 "required": false,
                 "code": "notes",
-                "defaultValue": " "
+                "defaultValue": "",
+                "min": 0,
+                "max": 50
             }
         ]
     }
-]
+  ]
 }
