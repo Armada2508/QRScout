@@ -28,9 +28,6 @@ export function App() {
 
   return (
     <StatsigProvider client={client} loadingComponent={<div>Loading...</div>}>
-      <img src: shark1 >
-        
-      </img>
         <ThemeProvider>
           <div className="min-h-screen py-2">
             <Header />
