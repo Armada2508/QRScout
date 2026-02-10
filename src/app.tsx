@@ -8,7 +8,6 @@ import { ThemeProvider } from './components/ThemeProvider';
 import { useQRScoutState } from './store/store';
 import { StatsigProvider, useClientAsyncInit } from '@statsig/react-bindings';
 import { runStatsigAutoCapture } from '@statsig/web-analytics';
-import shark1 from "src\assets\images\shark1.png";
 
 export function App() {
   const { teamNumber, pageTitle } = useQRScoutState(state => ({
