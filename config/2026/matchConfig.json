@@ -120,6 +120,14 @@
           }
         },
         {
+            "title": "Preloaded?",
+            "description": "Is the robot preloaded with fuel?",
+            "type": "boolean",
+            "required": false,
+            "code": "pL",
+            "defaultValue": false
+        },
+        {
           "title": "No Show",
           "description": "Check if the robot did not show up for the match.",
           "type": "boolean",
@@ -154,6 +162,16 @@
                   "4": "Outpost"
               },
               "multiSelect": true
+          },
+          {
+                "title": "Fuel Scored",
+                "description" : "How much fuel did they score during the auto period?",
+                "type": "counter",
+                "required": false,
+                "code": "fSAu",
+                "defaultValue": 0,
+                "min": 0,
+                "step": 1
           },
           {
               "title": "Accuracy of Hub Shots",
@@ -203,6 +221,16 @@
                 "code": "SWM",
                 "defaultValue": false
             },
+            {
+                "title": "Fuel Scored",
+                "description" : "How much fuel did they score during the active period?",
+                "type": "counter",
+                "required": false,
+                "code": "fSAc",
+                "defaultValue": 0,
+                "min": 0,
+                "step": 1
+          },
             {
                 "title": "Accuracy of Hub Shots",
                 "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 2 - Almost every shot went in.",
@@ -280,7 +308,7 @@
                 "defaultValue": false
             },
             {
-                "title": "Passing Fuel Effectiveness",
+                "title": "Passed Fuel",
                 "description" : "Alan, please add details",
                 "type": "range",
                 "required": false,
@@ -319,6 +347,16 @@
     {
         "name": "Endgame",
         "fields": [
+            {
+                "title": "Fuel Scored",
+                "description" : "How much fuel did they score during the endgame period?",
+                "type": "counter",
+                "required": false,
+                "code": "fSE",
+                "defaultValue": 0,
+                "min": 0,
+                "step": 1
+          },
             {
                 "title": "Climbed?",
                 "description": "Did the robot manage to climb at all?",
@@ -408,6 +446,17 @@
                 "type": "range",
                 "required": false,
                 "code": "Saf",
+                "defaultValue": 0,
+                "min": 0,
+                "max": 10,
+                "step": 1
+            },
+            {
+                "title": "Support",
+                "description" : "How well did the robot support other robots?",
+                "type": "range",
+                "required": false,
+                "code": "support",
                 "defaultValue": 0,
                 "min": 0,
                 "max": 10,

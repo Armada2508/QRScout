@@ -108,7 +108,6 @@ def update_google_sheet(qr_data):
     print(qr_data)
     qr_data_array = []
     if type(qr_data) == str:
-
         qr_data_array = qr_data.split("\t")
         print(qr_data_array)
     if not qr_data:
@@ -121,6 +120,10 @@ def update_google_sheet(qr_data):
     Pit: 45
     Match: 33
     Cycle: 10
+    2026:
+    Pit: 34
+    Match: 38
+    Cycle: Negligable
     """
     if len(qr_data_array) == 46: # If it's pit scout data
         #print("Scout Type: Pit")
