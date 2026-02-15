@@ -1,10 +1,11 @@
 import { produce } from 'immer';
 import { cloneDeep } from 'lodash';
 // import configJson from '../../config/2026/config.json';
-import matchConfigJson from '../../config/2025/config.json'
+// import matchConfigJson from '../../config/2025/config.json'
+import matchConfigJson2026 from "../../config/2026/matchConfig.json"
 import cycleConfigJson from '../../config/2025/cycleConfig.json'
-// import pitConfigJson2026 from '../../config/2026/pitConfig.json'
-import pitConfigJson from '../../config/2025/pitConfig.json'
+import pitConfigJson2026 from '../../config/2026/pitConfig.json'
+// import pitConfigJson from '../../config/2025/pitConfig.json'
 import matchConfigOwo from '../../config/2025/forbiddenConfigs/matchConfigOwO.json'
 import pitConfigOwO from "../../config/2025/forbiddenConfigs/pitConfigOwO.json"
 import {
@@ -36,7 +37,7 @@ export function getCycleConfig(): Config {
   return config.data;
 }
 export function getPitConfig(): Config {
-  const config = configSchema.safeParse(pitConfigJson);
+  const config = configSchema.safeParse(pitConfigJson2026);
   if (!config.success) {
     console.error(config.error);
     throw new Error('Invalid config schema');
@@ -44,7 +45,7 @@ export function getPitConfig(): Config {
   return config.data;
 }
 export function getMatchConfig(): Config {
-  const config = configSchema.safeParse(matchConfigJson);
+  const config = configSchema.safeParse(matchConfigJson2026);
   if (!config.success) {
     console.error(config.error);
     throw new Error('Invalid config schema');

@@ -110,17 +110,47 @@
         ]
     },
     {
-        "name": "Robot Capabilities",
-        "fields": [
-            
-        ]
-            
-    },
-    {
-        "name": "Drivebase Info",
+        "name": "Robot Info",
         "fields": [
             {
-                "title": "Drivebase",
+                "title": "Length",
+                "type": "number",
+                "description": "Lenth of the robots drivebase (in inches pls)",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "len"
+            },
+            {
+                "title": "Width",
+                "type": "number",
+                "description": "Width of the robots drivebase (in inches pls)",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "wid"
+            },
+            {
+                "title": "Height",
+                "type": "number",
+                "description": "The height of the robot (in inches pls)",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "high"
+            },
+            {
+                "title": "Weight",
+                "type": "number",
+                "description": "Their robot's weight (don't fatshame)",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "wei"
+            },
+            {
+                "title": "Drivetrain",
+                "description": "What kind of Drivetrain (or Drivebase) does their robot have?",
                 "type": "select",
                 "required": false,
                 "defaultValue": "",
@@ -133,15 +163,6 @@
                     "other": "Other"
                 },
                 "code": "drv"
-            },
-            {
-                "title": "Gear Ratio",
-                "type": "number",
-                "description": "What is the gear ratio of their drivebase",
-                "required": false,
-                "defaultValue": 0,
-                "formResetBehavior": "reset",
-                "code": "gearratio"
             },
             {
                 "title": "Drivebase Motors",
@@ -157,80 +178,244 @@
                     "Vortex": "Vortex",
                     "other": "Other"
                 },
-                "code": "drivemotors"
+                "code": "drvmot"
             },
             {
-                "title": "Other Drive Motor",
-                "type": "text",
-                "description": "What motor they are using if not one of the above four",
+                "title": "Gear Ratio",
+                "type": "number",
+                "description": "What is the gear ratio of their drivebase",
+                "required": false,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "gearratio"
+            },
+            {
+                "title": "Programming Language",
+                "type": "select",
+                "description": "What programming language does their robot primarily use?",
+                "required": false,
+                "defaultValue": "Unknown",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "java": "Java",
+                    "C++": "C++",
+                    "python": "Python",
+                    "other": "other"
+                },
+                "code": "prglan"
+            },
+            {
+                "title": "Automatic Alignment",
+                "description": "Does their robot have Automatic Alignment?",
+                "type": "boolean",
+                "required": false,
+                "code": "autali",
+                "defaultValue": false
+            },
+            {
+                "title": "Traversability",
+                "description": "Can their robot move over the field's bumbs, trenches, or both of them?",
+                "type": "select",
+                "code": "btb",
                 "required": false,
                 "defaultValue": "",
-                "formResetBehavior": "reset",
-                "code": "otherdrivemotor"
+                "choices": {
+                    "none": "None",
+                    "bump": "Bump",
+                    "trench": "Trench",
+                    "both": "Both"
+                },
+                "multiSelect": false
             },
             {
-                "title": "Length",
+                "title": "Pickup Locations",
+                "description": "Where can thier robot pickup fuel from?",
+                "type": "select",
+                "required": false,
+                "code": "pickLoc",
+                "defaultValue": "",
+                "choices": {
+                    "none": "None",
+                    "ground": "Ground",
+                    "outpost": "Outpost",
+                    "both": "Both"
+                },
+                "multiSelect": false
+            },
+            {
+                "title": "Bumper Clearance",
                 "type": "number",
-                "description": "Length of robot (in inches)",
+                "description": "How far off the ground is their robot's bumpers?",
                 "required": false,
                 "defaultValue": 0,
                 "formResetBehavior": "reset",
-                "code": "len"
+                "code": "bumClr"
             },
             {
-                "title": "Width",
+                "title": "Shooter Speed",
                 "type": "number",
-                "description": "Width of robot (in inches)",
+                "description": "x",
                 "required": false,
                 "defaultValue": 0,
                 "formResetBehavior": "reset",
-                "code": "wid"
+                "code": "SS"
             },
             {
-                "title": "Weight",
-                "type": "number",
-                "description": "Weight of robot (in pounds)",
+                "title": "Turret or Fixed?",
+                "description": "Does their robot use a turret for it's shooter or is it at a fixed position?",
+                "type": "select",
                 "required": false,
-                "defaultValue": 0,
-                "formResetBehavior": "reset",
-                "code": "wei"
+                "code": "tOrF",
+                "defaultValue": "",
+                "choices": {
+                    "turret": "Turret",
+                    "fixed": "Fixed"
+                },
+                "multiSelect": false
             }
-        ]
+        ]   
     },
     {
-        "name": "General Game Focus",
+        "name": "Strategy",
         "fields": [
-            
-        ]
-    },
-    {
-        "name": "Human Player",
-        "fields": [
-            
+            {
+                "title": "Transition Period Strategy",
+                "description": "What is their strategy during the transition period? (Ask about their passing capabilities/plans)",
+                "type": "text",
+                "required": false,
+                "code": "strTP",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Inactive Period Strategy",
+                "description": "What is their strategy during the Inactive Period",
+                "type": "text",
+                "required": false,
+                "code": "strIP",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Active Period Strategy",
+                "description": "What is their strategy during the Active Period",
+                "type": "text",
+                "required": false,
+                "code": "strAP",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Endgame Period Strategy",
+                "description": "blah blah blah",
+                "type": "text",
+                "required": false,
+                "code": "strEG",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            }
         ]
     },
     {
         "name": "Auto",
         "fields": [
-            
-        ]
-    },
-    {
-        "name": "Estimated Cycle Times",
-        "fields": [
-            
+            {
+                "title": "Move?",
+                "description": "Can the robot move?",
+                "type": "boolean",
+                "required": false,
+                "code": "movAut",
+                "defaultValue": false
+            },
+            {
+                "title": "Score?",
+                "description": "Can the robot score in the auto period?",
+                "type": "boolean",
+                "required": false,
+                "code": "scoAut",
+                "defaultValue": false
+            },
+            {
+                "title": "Auto Scoring",
+                "description": "Around how much can the robot score duing the auto period?",
+                "type": "select",
+                "required": false,
+                "code": "scoAutCount",
+                "defaultValue": "",
+                "choices": {
+                    "zero": "0",
+                    "low": "1-5",
+                    "avg": "6-10",
+                    "alot": "11-15"
+                },
+                "multiSelect": false
+            },
+            {
+                "title": "Fuel Collection",
+                "description": "Can the robot collect fuel?",
+                "type": "boolean",
+                "required": false,
+                "code": "fuelCol",
+                "defaultValue": false
+            },
+            {
+                "title": "Fuel Collection Area?",
+                "description": "Where does their robot collect fuel from?",
+                "type": "select",
+                "required": false,
+                "code": "fuelColAr",
+                "defaultValue": "",
+                "choices": {
+                    "nowhere": "Nowhere",
+                    "ground": "Ground",
+                    "outpost": "Outpost",
+                    "both": "Both"
+                },
+                "multiSelect": false
+            }
         ]
     },
     {
         "name": "Scouting",
         "fields": [
-            
+            {
+                "title": "Pit Scouters?",
+                "description": "Do they have pit scouters?",
+                "type": "boolean",
+                "required": false,
+                "code": "pitSco",
+                "defaultValue": false
+            },
+            {
+                "title": "Match Scouters?",
+                "description": "Do they have match scouters?",
+                "type": "boolean",
+                "required": false,
+                "code": "matSco",
+                "defaultValue": false
+            },
+            {
+                "title": "Scouting Data Sharing?",
+                "description": "Would they be interesting in sharing scouting data in the future?",
+                "type": "boolean",
+                "required": false,
+                "code": "scoDataShar",
+                "defaultValue": false
+            }
         ]
     },
     {
         "name": "Comments",
         "fields": [
-            
+            {
+                "title": "Comments?",
+                "description": "Any comments (from you, the scouter, also please be nice)",
+                "type": "text",
+                "required": false,
+                "code": "com",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            }
         ]
     }
 ]
