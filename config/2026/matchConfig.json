@@ -156,7 +156,7 @@
               "defaultValue": "",
               "required": false,
               "choices": {
-                  "1": "Cannot Pick-Up fuel",
+                  "1": "Pre-Load",
                   "2": "Depot",
                   "3": "Center",
                   "4": "Outpost"
@@ -181,7 +181,7 @@
               "code": "AHS",
               "defaultValue": 0,
               "min": 1,
-              "max": 5,
+              "max": 10,
               "step": 1
           },
           {
@@ -230,7 +230,7 @@
                 "defaultValue": 0,
                 "min": 0,
                 "step": 1
-          },
+            },
             {
                 "title": "Accuracy of Hub Shots",
                 "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 2 - Almost every shot went in.",
@@ -239,27 +239,7 @@
                 "code": "e",
                 "defaultValue": 0,
                 "min": 0,
-                "max": 5,
-                "step": 1
-            },
-            {
-                "title": "Human Player Scores",
-                "description" : "# of times a human player scored points by throwing fuel into the hub.",
-                "type": "counter",
-                "required": false,
-                "code": "HPS",
-                "defaultValue": 0,
-                "min": 0,
-                "step": 1
-            },
-            {
-                "title": "Human Player Shots Missed",
-                "description" : "# of shots a human player missed",
-                "type": "counter",
-                "required": false,
-                "code": "HPSM",
-                "defaultValue": 0,
-                "min": 0,
+                "max": 10,
                 "step": 1
             },
             {
@@ -271,11 +251,11 @@
                 "defaultValue": false
             },
             {
-                "title": "Malfunctioned/Died?",
-                "description": "Did the robot malfunction or die during the auto phase?",
+                "title": "Steal Fuel",
+                "description": "Did the robot steal fuel from the opponent's side?",
                 "type": "boolean",
                 "required": false,
-                "code": "MDA",
+                "code": "stFua",
                 "defaultValue": false
             },
             {
@@ -310,7 +290,7 @@
             {
                 "title": "Passed Fuel",
                 "description" : "Alan, please add details",
-                "type": "range",
+                "type": "counter",
                 "required": false,
                 "code": "PFE",
                 "defaultValue": 0,
@@ -327,6 +307,14 @@
                 "defaultValue": false
             },
             {
+                "title": "Feed Fuel to Outpost?",
+                "description": "Is the robot able to feed fuel into an outpost?",
+                "type": "boolean",
+                "required": false,
+                "code": "e",
+                "defaultValue": false
+            },
+            {
                 "title": "Defense?",
                 "description": "Did the robot purposely play defense at all during an inactive phase?",
                 "type": "boolean",
@@ -336,10 +324,10 @@
             },
             {
                 "title": "Steal Fuel?",
-                "description": "Did the robot manage to steal fuel from other teams?",
+                "description": "Did the robot manage to steal fuel from the other team?",
                 "type": "boolean",
                 "required": false,
-                "code": "SF",
+                "code": "stFui",
                 "defaultValue": false
             }
         ]    
@@ -356,7 +344,31 @@
                 "defaultValue": 0,
                 "min": 0,
                 "step": 1
-          },
+            },
+            {
+                "title": "Defense?",
+                "description": "Did the robot purposely play defense at all during an inactive phase?",
+                "type": "boolean",
+                "required": false,
+                "code": "DFe",
+                "defaultValue": false
+            },
+            {
+                "title": "Steal Fuel?",
+                "description": "Did the robot manage to steal fuel from the other team?",
+                "type": "boolean",
+                "required": false,
+                "code": "stFui",
+                "defaultValue": false
+            },
+            {
+                "title": "Support?",
+                "description": "idk maybe Chris knows something",
+                "type": "boolean",
+                "required": false,
+                "code": "SUP",
+                "defaultValue": false
+            },
             {
                 "title": "Climbed?",
                 "description": "Did the robot manage to climb at all?",
@@ -473,10 +485,10 @@
             {
                 "title": "Any Penalties?",
                 "description": " ",
-                "type": "boolean",
+                "type": "text",
                 "required": false,
                 "code": "PEN",
-                "defaultValue": false
+                "defaultValue": ""
             },
             {
                 "title": "Damaged?",

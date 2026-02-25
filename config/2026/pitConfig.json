@@ -178,14 +178,15 @@
                     "Vortex": "Vortex",
                     "other": "Other"
                 },
-                "code": "drvmot"
+                "code": "drvmot",
+                "multiSelect": true
             },
             {
                 "title": "Gear Ratio",
-                "type": "number",
+                "type": "text",
                 "description": "What is the gear ratio of their drivebase",
                 "required": false,
-                "defaultValue": 0,
+                "defaultValue": "",
                 "formResetBehavior": "reset",
                 "code": "gearratio"
             },
@@ -254,7 +255,7 @@
             {
                 "title": "Shooter Speed",
                 "type": "number",
-                "description": "x",
+                "description": "The speed of their shooter in RPM",
                 "required": false,
                 "defaultValue": 0,
                 "formResetBehavior": "reset",
@@ -343,10 +344,11 @@
                 "code": "scoAutCount",
                 "defaultValue": "",
                 "choices": {
-                    "zero": "0",
-                    "low": "1-5",
-                    "avg": "6-10",
-                    "alot": "11-15"
+                    "0": "0",
+                    "1-5": "1-5",
+                    "6-10": "6-10",
+                    "11-15": "11-15",
+                    "15+": "15+"
                 },
                 "multiSelect": false
             },
