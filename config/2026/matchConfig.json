@@ -164,6 +164,16 @@
               "multiSelect": true
           },
           {
+            "title": "test",
+            "description": "testing",
+            "type": "counterx",
+            "code": "test",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "required": false
+          },
+          {
                 "title": "Fuel Scored",
                 "description" : "How much fuel did they score during the auto period?",
                 "type": "counter",
@@ -230,6 +240,9 @@
                 "defaultValue": 0,
                 "min": 0,
                 "step": 1
+            },
+            {
+                "type": "" 
             },
             {
                 "title": "Accuracy of Hub Shots",

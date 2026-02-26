@@ -1,6 +1,7 @@
 import { InputTypes } from './BaseInputProps';
 import CheckboxInput from './CheckboxInput';
 import CounterInput from './CounterInput';
+import CounterXInput from './CounterInputX';
 import NumberInput from './NumberInput';
 import RangeInput from './RangeInput';
 import SelectInput from './SelectInput';
@@ -25,6 +26,8 @@ export default function ConfigurableInput(props: ConfigurableInputProps) {
       return <CheckboxInput {...props} key={props.code} />;
     case 'counter':
       return <CounterInput {...props} key={props.code} />;
+    case 'counterX':
+      return <CounterXInput {...props} key={props.code}/>;
     case 'range':
       return <RangeInput {...props} key={props.code} />;
     case 'timer':

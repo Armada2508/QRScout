@@ -141,6 +141,9 @@
               "defaultValue": false
           },
           {
+              "type": ""
+          },
+          {
               "title": "Fuel Pick-Up locations?",
               "description": "If the robot can pick up fuel and where.",
               "type": "select",
