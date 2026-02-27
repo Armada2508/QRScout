@@ -40,7 +40,8 @@ export default function CounterInput(props: ConfigurableInputProps) {
   );
 
   useEvent('resetFields', resetState);
-
+  console.log('used this');
+  
   const handleChange = useCallback(
     (increment: number) => {
       const newVal = value + increment;

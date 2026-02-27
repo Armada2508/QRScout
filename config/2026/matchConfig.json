@@ -166,11 +166,12 @@
           {
             "title": "test",
             "description": "testing",
-            "type": "counterx",
+            "type": "counter",
             "code": "test",
             "min": 0,
             "max": 10,
             "step": 1,
+            "bigStep": false,
             "required": false
           },
           {
@@ -181,6 +182,7 @@
                 "code": "fSAu",
                 "defaultValue": 0,
                 "min": 0,
+                "bigStep": false,
                 "step": 1
           },
           {
@@ -239,6 +241,7 @@
                 "code": "fSAc",
                 "defaultValue": 0,
                 "min": 0,
+                "bigStep": false,
                 "step": 1
             },
             {
@@ -309,6 +312,7 @@
                 "defaultValue": 0,
                 "min": 0,
                 "max": 5,
+                "bigStep": false,
                 "step": 1
             },
             {
@@ -356,6 +360,7 @@
                 "code": "fSE",
                 "defaultValue": 0,
                 "min": 0,
+                "bigStep": false,
                 "step": 1
             },
             {
@@ -399,6 +404,7 @@
                 "defaultValue": 0,
                 "min": 0,
                 "max": 3,
+                "bigStep": false,
                 "step": 1
             },
             {

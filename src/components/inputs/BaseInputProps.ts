@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const inputTypeSchema = z
-  .enum(['text', 'number', 'boolean', 'range', 'select', 'counter', 'counterX', 'timer'])
+  .enum(['text', 'number', 'boolean', 'range', 'select', 'counter', 'timer'])
   .describe('The type of input');
 
 export const inputBaseSchema = z.object({
@@ -51,15 +51,7 @@ export const counterInputSchema = inputBaseSchema.extend({
   min: z.number().optional().describe('The minimum value'),
   max: z.number().optional().describe('The maximum value'),
   step: z.number().optional().describe('The step value').default(1),
-  defaultValue: z.number().default(0).describe('The default value'),
-});
-
-export const counterXInputSchema = inputBaseSchema.extend({
-  type: z.literal('counter'),
-  min: z.number().optional().describe('The minimum value'),
-  max: z.number().optional().describe('The maximum value'),
-  step: z.number().optional().describe('The step value').default(1),
-  step2: z.number().optional().describe('The bigger step value'),
+  bigStep: z.boolean().optional().describe("Bigger step").default(false),
   defaultValue: z.number().default(0).describe('The default value'),
 });
 
@@ -87,7 +79,6 @@ export const sectionSchema = z.object({
   fields: z.array(
     z.discriminatedUnion('type', [
       counterInputSchema,
-      counterXInputSchema,
       stringInputSchema,
       numberInputSchema,
       selectInputSchema,
@@ -214,7 +205,6 @@ export type InputBase = z.infer<typeof inputBaseSchema>;
 export type SelectInputData = z.infer<typeof selectInputSchema>;
 export type StringInputData = z.infer<typeof stringInputSchema>;
 export type NumberInputData = z.infer<typeof numberInputSchema>;
-export type CounterXInputData = z.infer<typeof counterXInputSchema>;
 export type CounterInputData = z.infer<typeof counterInputSchema>;
 export type RangeInputData = z.infer<typeof rangeInputSchema>;
 export type BooleanInputData = z.infer<typeof booleanInputSchema>;
@@ -227,7 +217,6 @@ export type InputPropsMap = {
   range: RangeInputData;
   select: SelectInputData;
   counter: CounterInputData;
-  counterx: CounterXInputData;
   timer: TimerInputData;
 };
 
