@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { useEvent } from '@/hooks';
 import { inputSelector, updateValue, useQRScoutState } from '@/store/store';
-import { Minus, Plus } from 'lucide-react';
+import { Minus, Plus, OctagonMinus, BadgePlus } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 import { CounterInputData } from './BaseInputProps';
 import { ConfigurableInputProps } from './ConfigurableInput';
@@ -64,6 +64,9 @@ export default function CounterInput(props: ConfigurableInputProps) {
 
   return (
     <div className="my-2 flex flex-row items-center justify-center">
+      {data.bigStep && <Button variant="outline" onClick={() => handleChange(-((data.step * 5) || 1))}>
+        <OctagonMinus />
+      </Button>}
       <Button variant="outline" onClick={() => handleChange(-(data.step || 1))}>
         <Minus />
       </Button>
@@ -71,6 +74,9 @@ export default function CounterInput(props: ConfigurableInputProps) {
       <Button variant="outline" onClick={() => handleChange(data.step || 1)}>
         <Plus />
       </Button>
+      {data.bigStep && <Button variant="outline" onClick={() => handleChange(((data.step * 5) || 1))}>
+        <BadgePlus />
+      </Button>}
     </div>
   );
 }
