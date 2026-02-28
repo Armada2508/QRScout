@@ -122,14 +122,14 @@ def update_google_sheet(qr_data):
     Cycle: 10
     2026:
     Pit: 34
-    Match: 38
+    Match: 45
     Cycle: Negligable
     """
     if len(qr_data_array) == 46: # If it's pit scout data
         #print("Scout Type: Pit")
         sheet_number = 2
         #print("from ifs" + str(sheet_number))
-    elif len(qr_data_array) == 33: # If it's match scout data
+    elif len(qr_data_array) == 45: # If it's match scout data
         #print("Scout Type: Match")
         sheet_number = 1
         #print("from ifs " + str(sheet_number))
@@ -142,7 +142,7 @@ def update_google_sheet(qr_data):
     if sheet_number == 2:
         #print(sheet_number)
         try:
-            sheet = client.open("Scouting Data UofMN(Reefscape)").worksheet("Pit")
+            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet").worksheet("Pit")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -161,7 +161,7 @@ def update_google_sheet(qr_data):
     elif sheet_number == 1:
         #print(sheet_number)
         try:
-            sheet = client.open("Scouting Data UofMN(Reefscape)").worksheet("Match")
+            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet").worksheet("Match Data")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -297,10 +297,10 @@ if __name__ == '__main__':
         if data:
             #If data isn't a string, continue
             try:
-                # print("Data type from line 276: ")
-                # print(qr_array)
+                print("Data type from line 276: ")
+                print(qr_array)
                 qr_array=str(data)
-                # print(data)
+                print(data)
                 
             except Exception as e:
                 print("An Error Has Occured, Please make sure the QR code returns a string\n")
@@ -331,7 +331,7 @@ if __name__ == '__main__':
         """
         prev_qr_arrays.append(qr_array)
         update_google_sheet(qr_array)
-        winsound.Beep(2500,500)
+        winsound.Beep(5000,1000)
         time.sleep(0.1)
 
     cap.release()
