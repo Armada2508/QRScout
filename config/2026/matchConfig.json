@@ -152,7 +152,7 @@
               "title": "Fuel Pick-Up locations?",
               "description": "If the robot can pick up fuel and where.",
               "type": "select",
-              "code": "FPU",
+              "code": "FPUau",
               "defaultValue": "",
               "required": false,
               "choices": {
@@ -212,6 +212,21 @@
                 "required": false,
                 "code": "S",
                 "defaultValue": false
+            },
+            {
+                "title": "Fuel Pick-Up locations?",
+                "description": "If the robot can pick up fuel and where.",
+                "type": "select",
+                "code": "FPUac",
+                "defaultValue": "",
+                "required": false,
+                "choices": {
+                    "Pre-Load": "Pre-Load",
+                    "Ground": "Ground",
+                    "Outpost": "Outpost",
+                    "All": "All"
+                },
+                "multiSelect": true
             },
             {
                 "title": "Shoot while moving?",
