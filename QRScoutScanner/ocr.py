@@ -130,7 +130,7 @@ def update_google_sheet(qr_data):
         #print("Scout Type: Pit")
         sheet_number = 2
         #print("from ifs" + str(sheet_number))
-    elif len(qr_data_array) == 45: # If it's match scout data
+    elif len(qr_data_array) == 46: # If it's match scout data
         #print("Scout Type: Match")
         sheet_number = 1
         #print("from ifs " + str(sheet_number))

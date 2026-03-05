@@ -176,13 +176,13 @@
           },
           {
               "title": "Accuracy of Hub Shots",
-              "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 2 - Almost every shot went in.",
+              "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 5 - Almost every shot went in.",
               "type": "range",
               "required": false,
               "code": "AHS",
-              "defaultValue": 1,
-              "min": 1,
-              "max": 10
+              "defaultValue": 0,
+              "min": 0,
+              "max": 5
           },
           {
               "title": "Climbed",
@@ -249,13 +249,13 @@
             },
             {
                 "title": "Accuracy of Hub Shots",
-                "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 2 - Almost every shot went in.",
+                "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 5 - Almost every shot went in.",
                 "type": "range",
                 "required": false,
                 "code": "e",
-                "defaultValue": 1,
-                "min": 1,
-                "max": 10
+                "defaultValue": 0,
+                "min": 0,
+                "max": 5
             },
             {
                 "title": "Feed Fuel to Outpost?",
@@ -304,13 +304,13 @@
             },
             {
                 "title": "Passed Fuel",
-                "description" : "Alan, please add details",
-                "type": "range",
+                "description" : "Amount of fuel passed.",
+                "type": "counter",
                 "required": false,
                 "code": "PFE",
-                "defaultValue": 1,
-                "min": 1,
-                "max": 5
+                "defaultValue": 0,
+                "min": 0,
+                "bigStep": true
             },
             {
                 "title": "Shoot while moving?",
