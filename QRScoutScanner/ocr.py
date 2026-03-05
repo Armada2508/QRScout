@@ -1,4 +1,5 @@
 import subprocess
+from playsound import playsound
 import time
 import os
 import cv2
@@ -13,7 +14,7 @@ import random
 import pyttsx3
 #Video Stream for windows
 class VideoStream:
-
+    
     #Constructor Class
     def __init__(self, src):
         self.stream = cv2.VideoCapture(src)     #Stream of frames
@@ -125,7 +126,7 @@ def update_google_sheet(qr_data):
     Match: 45
     Cycle: Negligable
     """
-    if len(qr_data_array) == 46: # If it's pit scout data
+    if len(qr_data_array) == 33: # If it's pit scout data
         #print("Scout Type: Pit")
         sheet_number = 2
         #print("from ifs" + str(sheet_number))
@@ -258,6 +259,7 @@ def openQRScanner(filePath):
         #print(type(qr_array))
         prev_qr_arrays.append(qr_array)
         winsound.Beep(2500,500)
+        playsound()
         time.sleep(0.5)
     cv2.destroyAllWindows()
 
@@ -331,7 +333,8 @@ if __name__ == '__main__':
         """
         prev_qr_arrays.append(qr_array)
         update_google_sheet(qr_array)
-        winsound.Beep(5000,1000)
+        # winsound.Beep(5000,1000)
+        playsound("C:/Users/andre/Downloads/waltuh.mp3")
         time.sleep(0.1)
 
     cap.release()

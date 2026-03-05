@@ -1,6 +1,6 @@
 {
     "title": "QRScout",
-  "page_title": "Reefscape",
+  "page_title": "Rebuilt",
   "delimiter": "\t",
   "teamNumber": 2508,
   "theme": {
@@ -180,6 +180,15 @@
                 },
                 "code": "drvmot",
                 "multiSelect": true
+            },
+            {
+                "title": "Other Motors",
+                "description": "Any additional motors their robot uses.",
+                "type": "text",
+                "required": false,
+                "code": "addMot",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
             },
             {
                 "title": "Gear Ratio",
