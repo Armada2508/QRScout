@@ -156,10 +156,11 @@
               "defaultValue": "",
               "required": false,
               "choices": {
-                  "1": "Pre-Load",
-                  "2": "Depot",
-                  "3": "Center",
-                  "4": "Outpost"
+                  "Pre-Load": "Pre-Load",
+                  "Depot": "Depot",
+                  "Center": "Center",
+                  "Outpost": "Outpost",
+                  "All": "All"
               },
               "multiSelect": true
           },
