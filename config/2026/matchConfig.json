@@ -157,8 +157,7 @@
               "required": false,
               "choices": {
                   "Pre-Load": "Pre-Load",
-                  "Depot": "Depot",
-                  "Center": "Center",
+                  "Ground": "Ground",
                   "Outpost": "Outpost",
                   "All": "All"
               },
