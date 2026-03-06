@@ -182,7 +182,7 @@
               "code": "AHS",
               "defaultValue": 0,
               "min": 0,
-              "max": 5
+              "max": 10
           },
           {
               "title": "Climbed",
@@ -255,7 +255,7 @@
                 "code": "e",
                 "defaultValue": 0,
                 "min": 0,
-                "max": 5
+                "max": 10
             },
             {
                 "title": "Feed Fuel to Outpost?",

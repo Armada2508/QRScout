@@ -143,7 +143,7 @@ def update_google_sheet(qr_data):
     if sheet_number == 2:
         #print(sheet_number)
         try:
-            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet").worksheet("Pit")
+            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet (PRACTICE)").worksheet("Pit Data")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -162,7 +162,7 @@ def update_google_sheet(qr_data):
     elif sheet_number == 1:
         #print(sheet_number)
         try:
-            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet").worksheet("Match Data")
+            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet (PRACTICE)").worksheet("Match Data")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -267,7 +267,7 @@ def openQRScanner(filePath):
 if __name__ == '__main__':
 
     cap = cv2.VideoCapture(0)
-    exposure = 1
+    exposure = -5
     cap.set(cv2.CAP_PROP_EXPOSURE, exposure)      #Set camera settings
     # initialize the cv2 QRCode detector 
     detector = cv2.QRCodeDetector()
