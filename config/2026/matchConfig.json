@@ -164,16 +164,23 @@
               "multiSelect": true
           },
           {
-                "title": "Fuel Scored",
-                "description" : "How much fuel did they score during the auto period?",
-                "type": "counter",
-                "required": false,
-                "code": "fSAu",
-                "defaultValue": 0,
-                "min": 0,
-                "bigStep": true,
-                "step": 1
-          },
+            "title": "Fuel Scored",
+            "description": "Around how much fuel did they score during the auto period?",
+            "type": "select",
+            "code": "fSAu",
+            "defaultValue": "",
+            "required": false,
+            "choices": {
+                "0": "0",
+                "1-10": "1-10",
+                "11-20": "11-20",
+                "21-30": "21-30",
+                "31-40": "31-40",
+                "41-50": "41-50",
+                "51+": "51+"
+            },
+            "multiSelect": true
+            },
           {
               "title": "Accuracy of Hub Shots",
               "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 5 - Almost every shot went in.",
@@ -229,23 +236,30 @@
                 "multiSelect": true
             },
             {
+                "title": "Fuel Scored",
+                "description": "Around how much fuel did they score during the auto period?",
+                "type": "select",
+                "code": "fSAc",
+                "defaultValue": "",
+                "required": false,
+                "choices": {
+                    "0": "0",
+                    "1-10": "1-10",
+                    "11-20": "11-20",
+                    "21-30": "21-30",
+                    "31-40": "31-40",
+                    "41-50": "41-50",
+                    "51+": "51+"
+                },
+                "multiSelect": true
+                },
+            {
                 "title": "Shoot while moving?",
                 "description": "Can the robot shoot fuel into a hub while it's moving?",
                 "type": "boolean",
                 "required": false,
                 "code": "SWM",
                 "defaultValue": false
-            },
-            {
-                "title": "Fuel Scored",
-                "description" : "How much fuel did they score during the active period?",
-                "type": "counter",
-                "required": false,
-                "code": "fSAc",
-                "defaultValue": 0,
-                "min": 0,
-                "bigStep": true,
-                "step": 1
             },
             {
                 "title": "Accuracy of Hub Shots",
@@ -304,13 +318,21 @@
             },
             {
                 "title": "Passed Fuel",
-                "description" : "Amount of fuel passed.",
-                "type": "counter",
+                "description": "Around how much fuel did they pass during the inactive period? (This includes stolen fuel from the opposing alliance)",
+                "type": "select",
+                "code": "fPIn",
+                "defaultValue": "",
                 "required": false,
-                "code": "PFE",
-                "defaultValue": 0,
-                "min": 0,
-                "bigStep": true
+                "choices": {
+                    "0": "0",
+                    "1-10": "1-10",
+                    "11-20": "11-20",
+                    "21-30": "21-30",
+                    "31-40": "31-40",
+                    "41-50": "41-50",
+                    "51+": "51+"
+                },
+                "multiSelect": true
             },
             {
                 "title": "Shoot while moving?",
@@ -351,14 +373,21 @@
         "fields": [
             {
                 "title": "Fuel Scored",
-                "description" : "How much fuel did they score during the endgame period?",
-                "type": "counter",
+                "description": "Around how much fuel did they score during the endgame period?",
+                "type": "select",
+                "code": "fSEnd",
+                "defaultValue": "",
                 "required": false,
-                "code": "fSE",
-                "defaultValue": 0,
-                "min": 0,
-                "bigStep": true,
-                "step": 1
+                "choices": {
+                    "0": "0",
+                    "1-10": "1-10",
+                    "11-20": "11-20",
+                    "21-30": "21-30",
+                    "31-40": "31-40",
+                    "41-50": "41-50",
+                    "51+": "51+"
+                },
+                "multiSelect": true
             },
             {
                 "title": "Defense?",
@@ -445,6 +474,21 @@
                     "2": "A Little",
                     "3": "Medium",
                     "4": "A Lot"
+                },
+                "multiSelect": false
+            },
+            {
+                "title": "Traversability",
+                "description": "Can they go over the Bump or go under the Trench?",
+                "type": "select",
+                "code": "tRAV",
+                "required": false,
+                "defaultValue": "",
+                "choices": {
+                    "1": "None",
+                    "2": "Bump",
+                    "3": "Trench",
+                    "4": "Both"
                 },
                 "multiSelect": false
             },

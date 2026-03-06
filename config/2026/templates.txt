@@ -11,6 +11,7 @@
     "description": "blah blah blah",
     "type": "select",
     "code": "e",
+    "required": false,
     "defaultValue": "",
     "choices": {
         "1": "",
