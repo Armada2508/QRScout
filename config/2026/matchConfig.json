@@ -67,7 +67,7 @@
           "type": "text",
           "required": true,
           "code": "scouter",
-          "defaultValue": "",
+          "defaultValue": "N/A",
           "formResetBehavior": "preserve"
         },
         {
@@ -85,7 +85,7 @@
           "type": "select",
           "required": true,
           "code": "robot",
-          "defaultValue": "R1",
+          "defaultValue": "N/A",
           "choices": {
             "R1": "Red 1",
             "R2": "Red 2",
@@ -112,7 +112,7 @@
           "type": "select",
           "required": true,
           "code": "sp",
-          "defaultValue": "",
+          "defaultValue": "N/A",
           "choices": {
             "R1": "Top",
             "R2": "Middle",
@@ -153,7 +153,7 @@
               "description": "If the robot can pick up fuel and where.",
               "type": "select",
               "code": "FPUau",
-              "defaultValue": "",
+              "defaultValue": "None",
               "required": false,
               "choices": {
                   "Pre-Load": "Pre-Load",
@@ -168,7 +168,7 @@
             "description": "Around how much fuel did they score during the auto period?",
             "type": "select",
             "code": "fSAu",
-            "defaultValue": "",
+            "defaultValue": "0",
             "required": false,
             "choices": {
                 "0": "0",
@@ -225,7 +225,7 @@
                 "description": "If the robot can pick up fuel and where.",
                 "type": "select",
                 "code": "FPUac",
-                "defaultValue": "",
+                "defaultValue": "None",
                 "required": false,
                 "choices": {
                     "Pre-Load": "Pre-Load",
@@ -240,7 +240,7 @@
                 "description": "Around how much fuel did they score during the auto period?",
                 "type": "select",
                 "code": "fSAc",
-                "defaultValue": "",
+                "defaultValue": "0",
                 "required": false,
                 "choices": {
                     "0": "0",
@@ -321,7 +321,7 @@
                 "description": "Around how much fuel did they pass during the inactive period? (This includes stolen fuel from the opposing alliance)",
                 "type": "select",
                 "code": "fPIn",
-                "defaultValue": "",
+                "defaultValue": "0",
                 "required": false,
                 "choices": {
                     "0": "0",
@@ -376,7 +376,7 @@
                 "description": "Around how much fuel did they score during the endgame period?",
                 "type": "select",
                 "code": "fSEnd",
-                "defaultValue": "",
+                "defaultValue": "0",
                 "required": false,
                 "choices": {
                     "0": "0",
@@ -427,7 +427,7 @@
                 "type": "select",
                 "code": "LC",
                 "required": false,
-                "defaultValue": " ",
+                "defaultValue": "No Climb",
                 "choices": {
                     "level 1": "Level 1",
                     "level 2": "Level 2",
@@ -449,7 +449,7 @@
                 "type": "select",
                 "code": "e",
                 "required": false,
-                "defaultValue": "",
+                "defaultValue": "No Climb",
                 "choices": {
                     "1": "Left Slide",
                     "2": "Middle/Center",
@@ -467,7 +467,7 @@
                 "description": "How much fuel the robot can storage.",
                 "type": "select",
                 "code": "e",
-                "defaultValue": "",
+                "defaultValue": "None",
                 "required": false,
                 "choices": {
                     "1": "None",
@@ -483,7 +483,7 @@
                 "type": "select",
                 "code": "tRAV",
                 "required": false,
-                "defaultValue": "",
+                "defaultValue": "None",
                 "choices": {
                     "1": "None",
                     "2": "Bump",
@@ -550,7 +550,7 @@
                 "type": "text",
                 "required": false,
                 "code": "PEN",
-                "defaultValue": ""
+                "defaultValue": "None"
             },
             {
                 "title": "Damaged?",
@@ -574,7 +574,7 @@
                 "type": "text",
                 "required": false,
                 "code": "notes",
-                "defaultValue": "",
+                "defaultValue": "None",
                 "min": 0,
                 "max": 50
             }

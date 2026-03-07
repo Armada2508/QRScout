@@ -45,6 +45,7 @@ class VideoStream:
         self.stream.release()
         self.stopped = True
 
+
 #Optical Character Recognizer
 class OCR:
 
@@ -134,7 +135,7 @@ def update_google_sheet(qr_data):
         #print("Scout Type: Match")
         sheet_number = 1
         #print("from ifs " + str(sheet_number))
-    elif len(qr_data_array) == 10: # If it's cycle scout data
+    elif len(qr_data_array) == 46: # If it's broken match scout data
         #print("Scout Type: Cycle")
         sheet_number = 3
         #print("from ifs" + str(sheet_number))
@@ -143,7 +144,7 @@ def update_google_sheet(qr_data):
     if sheet_number == 2:
         #print(sheet_number)
         try:
-            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet (PRACTICE)").worksheet("Pit Data")
+            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet").worksheet("Pit Data")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -162,7 +163,7 @@ def update_google_sheet(qr_data):
     elif sheet_number == 1:
         #print(sheet_number)
         try:
-            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet (PRACTICE)").worksheet("Match Data")
+            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet").worksheet("Match Data")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -181,7 +182,7 @@ def update_google_sheet(qr_data):
     elif sheet_number == 3:
         #print(sheet_number)
         try:
-            sheet = client.open("Scouting Data UofMN(Reefscape)").worksheet("Cycle")
+            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet").worksheet("Broken Match Data")
             #print("sheet opened!")
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -204,7 +205,7 @@ def openQRScanner(filePath):
     cap = OCR().start()                 #Start OCR thread
     cap.set_exchange(frames)            #Start copying video capture frames to ocr
     detector = cv2.QRCodeDetector()     #Create QR code detector 
-    
+    ranNum = random.randint(1,3)
     prev_qr_arrays = [None]
     #QR Scanner loop, breaks when you hit 'q'
 
