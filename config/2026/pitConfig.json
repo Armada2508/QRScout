@@ -63,12 +63,12 @@
         "fields": [
             
             {
-                "title": "Scouter Initials",
-                "description": "Enter the initials of the scouter",
+                "title": "Scouter First Name",
+                "description": "Enter the first name of the scouter.",
                 "type": "text",
                 "required": true,
                 "code": "scouter",
-                "defaultValue": "",
+                "defaultValue": "N/A",
                 "formResetBehavior": "preserve"
             },
             {
