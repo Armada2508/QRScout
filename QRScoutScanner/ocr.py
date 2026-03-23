@@ -144,7 +144,7 @@ def update_google_sheet(qr_data):
     if sheet_number == 2:
         #print(sheet_number)
         try:
-            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet").worksheet("Pit Data")
+            sheet = client.open("Rebuilt 10k Lakes ARMADA Scouting Spreadsheet").worksheet("Pit Data")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -152,8 +152,13 @@ def update_google_sheet(qr_data):
             #print((qr_data) + " from UGS")
             
             qr_data_array = qr_data.split("\t")
+            for i, val in enumerate(qr_data_array):
+                if val.lower() == "true":
+                    qr_data_array[i] = True
+                elif val.lower() == "false":
+                    qr_data_array[i] = False
             next_row = len(sheet.get_all_values()) + 1
-            #print(f"Next row to be appended: {next_row}")
+            #print(f"Next row to be appended: {next_row}")4
             sheet.insert_row(qr_data_array, next_row)
             # sheet.append_row(cleaned_data)
             # sheet.append_row("\n")
@@ -163,7 +168,7 @@ def update_google_sheet(qr_data):
     elif sheet_number == 1:
         #print(sheet_number)
         try:
-            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet").worksheet("Match Data")
+            sheet = client.open("Rebuilt 10k Lakes ARMADA Scouting Spreadsheet").worksheet("Match Data")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -171,6 +176,11 @@ def update_google_sheet(qr_data):
             #print((qr_data) + " from UGS")
             
             qr_data_array = qr_data.split("\t")
+            for i, val in enumerate(qr_data_array):
+                if val.lower() == "true":
+                    qr_data_array[i] = True
+                elif val.lower() == "false":
+                    qr_data_array[i] = False
             next_row = len(sheet.get_all_values()) + 1
             #print(f"Next row to be appended: {next_row}")
             sheet.insert_row(qr_data_array, next_row)
@@ -182,7 +192,7 @@ def update_google_sheet(qr_data):
     elif sheet_number == 3:
         #print(sheet_number)
         try:
-            sheet = client.open("Bluff County ARMADA Scouting Spreadsheet").worksheet("Broken Match Data")
+            sheet = client.open("Rebuilt 10k Lakes ARMADA Scouting Spreadsheet").worksheet("Broken Match Data")
             #print("sheet opened!")
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -190,7 +200,14 @@ def update_google_sheet(qr_data):
             #print((qr_data) + " from UGS")
             
             qr_data_array = qr_data.split("\t")
+            # enumerate returns both the index and value, apparently it's better than "for i in range (len(qr_data_array))."
+            for i, val in enumerate(qr_data_array):
+                if val.lower() == "true":
+                    qr_data_array[i] = True
+                elif val.lower() == "false":
+                    qr_data_array[i] = False
             next_row = len(sheet.get_all_values()) + 1
+            print(qr_data_array)
             #print(f"Next row to be appended: {next_row}")
             sheet.insert_row(qr_data_array, next_row)
             # sheet.append_row(cleaned_data)
@@ -259,8 +276,9 @@ def openQRScanner(filePath):
         #print(qr_array)
         #print(type(qr_array))
         prev_qr_arrays.append(qr_array)
+
         winsound.Beep(2500,500)
-        playsound()
+        # playsound()
         time.sleep(0.5)
     cv2.destroyAllWindows()
 
@@ -300,11 +318,10 @@ if __name__ == '__main__':
         if data:
             #If data isn't a string, continue
             try:
-                print("Data type from line 276: ")
                 print(qr_array)
                 qr_array=str(data)
                 print(data)
-                
+                print(len(qr_array))
             except Exception as e:
                 print("An Error Has Occured, Please make sure the QR code returns a string\n")
                 print("5 second delay, please remove faulty QR code:\n")
@@ -332,6 +349,7 @@ if __name__ == '__main__':
 
 
         """
+
         prev_qr_arrays.append(qr_array)
         update_google_sheet(qr_array)
         # winsound.Beep(5000,1000)

@@ -31,6 +31,7 @@ export const numberInputSchema = inputBaseSchema.extend({
   min: z.number().optional().describe('The minimum value'),
   max: z.number().optional().describe('The maximum value'),
   defaultValue: z.number().default(0).describe('The default value'),
+  autofill: z.array(z.number()).optional().describe("Autofill options")
 });
 
 export const selectInputSchema = inputBaseSchema.extend({

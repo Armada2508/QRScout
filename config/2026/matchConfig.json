@@ -62,8 +62,8 @@
       "name": "Prematch",
       "fields": [
         {
-          "title": "Scouter Initials",
-          "description": "Enter the initials of the scouter.",
+          "title": "Scouter First Name",
+          "description": "Enter the first name of the scouter.",
           "type": "text",
           "required": true,
           "code": "scouter",
@@ -104,7 +104,8 @@
           "code": "team",
           "defaultValue": 0,
           "min": 0,
-          "max": 19999
+          "max": 19999,
+          "autofill": [ 2177 , 2181 , 2239 , 2450 , 2470 , 2480 , 2491 , 2508 , 2509 , 2530 , 2531 , 2667 , 2823 , 2846 , 2855 , 3038 , 3082 , 3297 , 3407 , 3454 , 3745 , 3871 , 3880 , 3926 , 4009 , 4174 , 4207 , 4215 , 4225 , 4229 , 4230 , 4239 , 4277 , 4536 , 4539 , 4664 , 4663 , 4778 , 4859 , 5143 , 5278 , 5690 , 5929 , 7019 , 7068 , 7235 , 7530 , 7849 , 7850 , 8234 , 8422 ]
         },
         {
           "title": "Starting Position",
@@ -463,21 +464,6 @@
         "name": "Postmatch",
         "fields": [
             {
-                "title": "Fuel Storage",
-                "description": "How much fuel the robot can storage.",
-                "type": "select",
-                "code": "e",
-                "defaultValue": "None",
-                "required": false,
-                "choices": {
-                    "1": "None",
-                    "2": "A Little",
-                    "3": "Medium",
-                    "4": "A Lot"
-                },
-                "multiSelect": false
-            },
-            {
                 "title": "Traversability",
                 "description": "Can they go over the Bump or go under the Trench?",
                 "type": "select",
@@ -493,22 +479,33 @@
                 "multiSelect": false
             },
             {
-                "title": "Defense",
-                "description" : "How well did the team play defense?",
+                "title": "Offense",
+                "description" : "How well did the team play offense?",
                 "type": "range",
                 "required": false,
-                "code": "Daf",
+                "code": "Oaf",
                 "defaultValue": 0,
                 "min": 0,
                 "max": 10,
                 "step": 1
             },
             {
-                "title": "Offense",
-                "description" : "How well did the team play offense?",
+                "title": "Fuel Storage",
+                "description" : "How well could the robot store fuel?",
                 "type": "range",
                 "required": false,
-                "code": "Oaf",
+                "code": "fuelStor",
+                "defaultValue": 0,
+                "min": 0,
+                "max": 10,
+                "step": 1
+            },
+            {
+                "title": "Defense",
+                "description" : "How well did the team play defense?",
+                "type": "range",
+                "required": false,
+                "code": "Daf",
                 "defaultValue": 0,
                 "min": 0,
                 "max": 10,
