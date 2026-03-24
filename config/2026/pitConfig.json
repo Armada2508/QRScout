@@ -325,6 +325,15 @@
                 "code": "strEG",
                 "defaultValue": "",
                 "formResetBehavior": "reset"
+            },
+            {
+                "title": "Climbing Strategy",
+                "description": "Ask for what they plan on doing for climbing thoughout the matches.",
+                "type": "text",
+                "required": false,
+                "code": "strCL",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
             }
         ]
     },
