@@ -1,7 +1,7 @@
 import { Copy, QrCode } from 'lucide-react';
 import { QRCodeSVG } from 'qrcode.react';
 import { useMemo } from 'react';
-import { getFieldValue, useQRScoutState } from '../../store/store';
+import { getConfig, getFieldValue, useQRScoutState } from '../../store/store';
 import { Button } from '../ui/button';
 import {
   Dialog,
@@ -17,12 +17,13 @@ export interface QRModalProps {
 }
 
 export function QRModal(props: QRModalProps) {
+  let config = getConfig()
   const fieldValues = useQRScoutState(state => state.fieldValues);
   const formData = useQRScoutState(state => state.formData);
-  const title = `${getFieldValue('robot')} - M${getFieldValue(
-    'matchNumber',
-  )}`.toUpperCase();
-
+  let title = `Team ${getFieldValue('team')} - Match ${getFieldValue('match')}`.toUpperCase();
+  if ((getFieldValue('silly')) !== ' ') {
+    title = `Team ${getFieldValue('team')} - ${getFieldValue('silly')}`.toUpperCase();
+  }
   const qrCodePreview = useMemo(
     () => fieldValues.map(f => f.value).join(','),
     [fieldValues],
