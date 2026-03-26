@@ -1,5 +1,5 @@
 import subprocess
-from playsound import playsound
+# from playsound import playsound
 import time
 import os
 import cv2
@@ -352,8 +352,8 @@ if __name__ == '__main__':
 
         prev_qr_arrays.append(qr_array)
         update_google_sheet(qr_array)
-        # winsound.Beep(5000,1000)
-        playsound("C:/Users/andre/Downloads/waltuh.mp3")
+        # # winsound.Beep(5000,1000)
+        # playsound("C:/Users/andre/Downloads/waltuh.mp3")
         time.sleep(0.1)
 
     cap.release()
