@@ -427,7 +427,7 @@
                 "description": "What was the highest level climbed?",
                 "type": "select",
                 "code": "LC",
-                "required": true,
+                "required": false,
                 "defaultValue": "No Climb",
                 "choices": {
                     "level 1": "Level 1",

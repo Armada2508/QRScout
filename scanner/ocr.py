@@ -127,7 +127,7 @@ def update_google_sheet(qr_data):
     Match: 45
     Cycle: Negligable
     """
-    if len(qr_data_array) == 33: # If it's pit scout data
+    if len(qr_data_array) == 34: # If it's pit scout data
         #print("Scout Type: Pit")
         sheet_number = 2
         #print("from ifs" + str(sheet_number))
