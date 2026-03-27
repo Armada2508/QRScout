@@ -266,10 +266,10 @@
             },
             {
                 "title": "Accuracy of Hub Shots",
-                "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 5 - Almost every shot went in.",
+                "description" : "How accurate the robot is at shooting fuel into a hub. 1 - Missed almost every shot, 10 - Almost every shot went in.",
                 "type": "range",
                 "required": true,
-                "code": "e",
+                "code": "accHubActive",
                 "defaultValue": 0,
                 "min": 0,
                 "max": 10
@@ -350,7 +350,7 @@
                 "description": "Is the robot able to feed fuel into an outpost?",
                 "type": "boolean",
                 "required": false,
-                "code": "e",
+                "code": "feedFuelOutpost",
                 "defaultValue": false
             },
             {
@@ -450,7 +450,7 @@
                 "title": "Climb Location",
                 "description": "What space the robot climbed on on the tower.",
                 "type": "select",
-                "code": "e",
+                "code": "climbLoc",
                 "required": false,
                 "defaultValue": "No Climb",
                 "choices": {
