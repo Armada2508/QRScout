@@ -157,6 +157,7 @@
               "defaultValue": "None",
               "required": true,
               "choices": {
+                    "None": "None",
                   "Pre-Load": "Pre-Load",
                   "Ground": "Ground",
                   "Outpost": "Outpost",
@@ -229,6 +230,7 @@
                 "defaultValue": "None",
                 "required": true,
                 "choices": {
+                    "None": "None",
                     "Pre-Load": "Pre-Load",
                     "Ground": "Ground",
                     "Outpost": "Outpost",
@@ -440,7 +442,7 @@
                 "title": "Climb speed",
                 "description": "The time the robot spent trying to climb. START AS SOON AS ROBOT BEGINS TO LINE ITSELF UP.",
                 "type": "timer",
-                "required": true,
+                "required": false,
                 "code": "timer",
                 "defaultValue": 0
             },
@@ -449,7 +451,7 @@
                 "description": "What space the robot climbed on on the tower.",
                 "type": "select",
                 "code": "e",
-                "required": true,
+                "required": false,
                 "defaultValue": "No Climb",
                 "choices": {
                     "1": "Left Slide",
