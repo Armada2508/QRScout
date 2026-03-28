@@ -473,10 +473,10 @@
                 "required": true,
                 "defaultValue": "None",
                 "choices": {
-                    "1": "None",
-                    "2": "Bump",
-                    "3": "Trench",
-                    "4": "Both"
+                    "No bump or trench": "None",
+                    "Bump": "Bump",
+                    "Trench": "Trench",
+                    "Bump & Trench": "Both"
                 },
                 "multiSelect": false
             },
