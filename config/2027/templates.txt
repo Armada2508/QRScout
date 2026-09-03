@@ -1,0 +1,70 @@
+{
+    "title": "yes/no template",
+    "description": "blah blah blah",
+    "type": "boolean",
+    "required": false,
+    "code": "e",
+    "defaultValue": false
+}
+{
+    "title": "multi-choice template",
+    "description": "blah blah blah",
+    "type": "select",
+    "code": "e",
+    "required": false,
+    "defaultValue": "",
+    "choices": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": ""
+    },
+    "multiSelect": false
+}
+{
+    "title": "counter template",
+    "description" : "blah blah blah",
+    "type": "counter",
+    "required": false,
+    "code": "e",
+    "defaultValue": 0,
+    "min": 0,
+    "step": 1
+}
+{
+    "title": "range template",
+    "description" : "blah blah blah",
+    "type": "range",
+    "required": false,
+    "code": "e",
+    "defaultValue": 0,
+    "min": 0,
+    "max": 5,
+    "step": 1
+}
+{
+    "title": "Cycle template",
+    "description": "blah blah blah",
+    "type": "timer",
+    "required": false,
+    "code": "timer",
+    "defaultValue": 0
+},
+{
+    "title": "Text Template",
+    "description": "blah blah blah",
+    "type": "text",
+    "required": false,
+    "code": "e",
+    "defaultValue": "",
+    "formResetBehavior": "reset"
+},
+{
+    "title": "number template",
+    "type": "number",
+    "description": "blah blah blah",
+    "required": false,
+    "defaultValue": 0,
+    "formResetBehavior": "reset",
+    "code": "e"
+},

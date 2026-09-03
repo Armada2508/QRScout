@@ -1,0 +1,444 @@
+{
+    "title": "QRScout",
+  "page_title": "Biocore",
+  "delimiter": "\t",
+  "teamNumber": 2508,
+  "theme": {
+    "light": {
+      "background": "0 0% 3.9%",
+      "foreground": "0 0% 98%",
+      "card": "0 0% 3.9%",
+      "card_foreground": "0 0% 98%",
+      "popover": "0 0% 3.9%",
+      "popover_foreground": "0 0% 98%",
+      "primary": "354.44 71.3% 47.9%",
+      "primary_foreground": "0 85.7% 97.3%",
+      "secondary": "0 0% 14.9%",
+      "secondary_foreground": "0 0% 98%",
+      "muted": "0 0% 14.9%",
+      "muted_foreground": "0 0% 63.9%",
+      "accent": "0 0% 14.9%",
+      "accent_foreground": "0 0% 98%",
+      "destructive": "0 62.8% 30.6%",
+      "destructive_foreground": "0 0% 98%",
+      "border": "0 0% 14.9%",
+      "input": "0 0% 14.9%",
+      "ring": "354.44 71.3% 47.9%",
+      "chart_1": "220 70% 50%",
+      "chart_2": "160 60% 45%",
+      "chart_3": "30 80% 55%",
+      "chart_4": "280 65% 60%",
+      "chart_5": "340 75% 55%"
+    },
+    "dark": {
+      "background": "0 0% 3.9%",
+      "foreground": "0 0% 98%",
+      "card": "0 0% 3.9%",
+      "card_foreground": "0 0% 98%",
+      "popover": "0 0% 3.9%",
+      "popover_foreground": "0 0% 98%",
+      "primary": "354.44 71.3% 47.9%",
+      "primary_foreground": "0 85.7% 97.3%",
+      "secondary": "0 0% 14.9%",
+      "secondary_foreground": "0 0% 98%",
+      "muted": "0 0% 14.9%",
+      "muted_foreground": "0 0% 63.9%",
+      "accent": "0 0% 14.9%",
+      "accent_foreground": "0 0% 98%",
+      "destructive": "0 62.8% 30.6%",
+      "destructive_foreground": "0 0% 98%",
+      "border": "0 0% 14.9%",
+      "input": "0 0% 14.9%",
+      "ring": "354.44 71.3% 47.9%",
+      "chart_1": "220 70% 50%",
+      "chart_2": "160 60% 45%",
+      "chart_3": "30 80% 55%",
+      "chart_4": "280 65% 60%",
+      "chart_5": "340 75% 55%"
+    }
+  },
+  "sections": [
+    {
+        "name": "Team Info",
+        "fields": [
+            
+            {
+                "title": "Scouter First Name",
+                "description": "Enter the first name of the scouter.",
+                "type": "text",
+                "required": true,
+                "code": "scouter",
+                "defaultValue": "N/A",
+                "formResetBehavior": "preserve"
+            },
+            {
+                "title": "Team Number",
+                "description": "Enter the number of the team being scouted",
+                "type": "number",
+                "required": true,
+                "code": "team",
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "autofill": [ 2177 , 2181 , 2239 , 2450 , 2470 , 2480 , 2491 , 2508 , 2509 , 2530 , 2531 , 2667 , 2823 , 2846 , 2855 , 3038 , 3082 , 3297 , 3407 , 3454 , 3745 , 3871 , 3880 , 3926 , 4009 , 4174 , 4207 , 4215 , 4225 , 4229 , 4230 , 4239 , 4277 , 4536 , 4539 , 4664 , 4663 , 4778 , 4859 , 5143 , 5278 , 5690 , 5929 , 7019 , 7068 , 7235 , 7530 , 7849 , 7850 , 8234 , 8422 ]
+
+            },
+            {
+                "title": "Cool Robot Name",
+                "description": "Does their robot have a name?",
+                "type": "text",
+                "required": true,
+                "code": "silly",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Team Name",
+                "description": "The name of thier team (NOT THE NUMBER)",
+                "type": "text",
+                "required": true,
+                "code": "billy",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Favorite Drink",
+                "description": "Whats their favorite drink?",
+                "type": "text",
+                "required": true,
+                "code": "favDR",
+                "defaultValue": "",
+                "formResetBehavior":"reset"
+            }
+        ]
+    },
+    {
+        "name": "Robot Info",
+        "fields": [
+            {
+                "title": "Length",
+                "type": "number",
+                "description": "Lenth of the robots drivebase (in inches pls)",
+                "required": true,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "len"
+            },
+            {
+                "title": "Width",
+                "type": "number",
+                "description": "Width of the robots drivebase (in inches pls)",
+                "required": true,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "wid"
+            },
+            {
+                "title": "Height",
+                "type": "number",
+                "description": "The height of the robot (in inches pls)",
+                "required": true,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "high"
+            },
+            {
+                "title": "Weight",
+                "type": "number",
+                "description": "Their robot's weight (don't fatshame)",
+                "required": true,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "wei"
+            },
+            {
+                "title": "Drivetrain",
+                "description": "What kind of Drivetrain (or Drivebase) does their robot have?",
+                "type": "select",
+                "required": true,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "swerve": "Swerve",
+                    "west/tank": "West Coast/Tank",
+                    "butterfly": "Butterfly/Grasshopper",
+                    "mechanum": "Mechanum",
+                    "other": "Other"
+                },
+                "code": "drv"
+            },
+            {
+                "title": "Drivebase Motors",
+                "type": "select",
+                "description": "What motors are they using to drive (not turning)",
+                "required": true,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "Kraken": "Kraken",
+                    "Falcon": "Falcon",
+                    "Neo": "Neo",
+                    "Vortex": "Vortex",
+                    "other": "Other"
+                },
+                "code": "drvmot",
+                "multiSelect": true
+            },
+            {
+                "title": "Other Motors",
+                "description": "Any additional motors their robot uses.",
+                "type": "text",
+                "required": true,
+                "code": "addMot",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Gear Ratio",
+                "type": "text",
+                "description": "What is the gear ratio of their drivebase",
+                "required": true,
+                "defaultValue": "",
+                "formResetBehavior": "reset",
+                "code": "gearratio"
+            },
+            {
+                "title": "Programming Language",
+                "type": "select",
+                "description": "What programming language does their robot primarily use?",
+                "required": true,
+                "defaultValue": "Unknown",
+                "formResetBehavior": "reset",
+                "choices": {
+                    "java": "Java",
+                    "C++": "C++",
+                    "python": "Python",
+                    "other": "other"
+                },
+                "code": "prglan"
+            },
+            {
+                "title": "Automatic Alignment",
+                "description": "Does their robot have Automatic Alignment?",
+                "type": "boolean",
+                "required": false,
+                "code": "autali",
+                "defaultValue": false
+            },
+            {
+                "title": "Traversability",
+                "description": "Can their robot move over the field's bumbs, trenches, or both of them?",
+                "type": "select",
+                "code": "btb",
+                "required": true,
+                "defaultValue": "",
+                "choices": {
+                    "none": "None",
+                    "bump": "Bump",
+                    "trench": "Trench",
+                    "both": "Both"
+                },
+                "multiSelect": false
+            },
+            {
+                "title": "Pickup Locations",
+                "description": "Where can thier robot pickup fuel from?",
+                "type": "select",
+                "required": true,
+                "code": "pickLoc",
+                "defaultValue": "",
+                "choices": {
+                    "none": "None",
+                    "ground": "Ground",
+                    "outpost": "Outpost",
+                    "both": "Both"
+                },
+                "multiSelect": false
+            },
+            {
+                "title": "Bumper Clearance",
+                "type": "number",
+                "description": "How far off the ground is their robot's bumpers?",
+                "required": true,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "bumClr"
+            },
+            {
+                "title": "Shooter Speed",
+                "type": "number",
+                "description": "The speed of their shooter in RPM",
+                "required": true,
+                "defaultValue": 0,
+                "formResetBehavior": "reset",
+                "code": "SS"
+            },
+            {
+                "title": "Turret or Fixed?",
+                "description": "Does their robot use a turret for it's shooter or is it at a fixed position?",
+                "type": "select",
+                "required": true,
+                "code": "tOrF",
+                "defaultValue": "",
+                "choices": {
+                    "turret": "Turret",
+                    "fixed": "Fixed"
+                },
+                "multiSelect": false
+            }
+        ]   
+    },
+    {
+        "name": "Strategy",
+        "fields": [
+            {
+                "title": "Transition Period Strategy",
+                "description": "What is their strategy during the transition period? (Ask about their passing capabilities/plans)",
+                "type": "text",
+                "required": true,
+                "code": "strTP",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Inactive Period Strategy",
+                "description": "What is their strategy during the Inactive Period",
+                "type": "text",
+                "required": true,
+                "code": "strIP",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Active Period Strategy",
+                "description": "What is their strategy during the Active Period",
+                "type": "text",
+                "required": true,
+                "code": "strAP",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Endgame Period Strategy",
+                "description": "blah blah blah",
+                "type": "text",
+                "required": true,
+                "code": "strEG",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            },
+            {
+                "title": "Climbing Strategy",
+                "description": "Ask for what they plan on doing for climbing thoughout the matches.",
+                "type": "text",
+                "required": true,
+                "code": "strCL",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            }
+        ]
+    },
+    {
+        "name": "Auto",
+        "fields": [
+            {
+                "title": "Move?",
+                "description": "Can the robot move?",
+                "type": "boolean",
+                "required": false,
+                "code": "movAut",
+                "defaultValue": false
+            },
+            {
+                "title": "Score?",
+                "description": "Can the robot score in the auto period?",
+                "type": "boolean",
+                "required": false,
+                "code": "scoAut",
+                "defaultValue": false
+            },
+            {
+                "title": "Auto Scoring",
+                "description": "Around how much can the robot score duing the auto period?",
+                "type": "select",
+                "required": true,
+                "code": "scoAutCount",
+                "defaultValue": "",
+                "choices": {
+                    "0": "0",
+                    "1-5": "1-5",
+                    "6-10": "6-10",
+                    "11-15": "11-15",
+                    "15+": "15+"
+                },
+                "multiSelect": false
+            },
+            {
+                "title": "Fuel Collection",
+                "description": "Can the robot collect fuel?",
+                "type": "boolean",
+                "required": true,
+                "code": "fuelCol",
+                "defaultValue": false
+            },
+            {
+                "title": "Fuel Collection Area?",
+                "description": "Where does their robot collect fuel from?",
+                "type": "select",
+                "required": true,
+                "code": "fuelColAr",
+                "defaultValue": "",
+                "choices": {
+                    "nowhere": "Nowhere",
+                    "ground": "Ground",
+                    "outpost": "Outpost",
+                    "both": "Both"
+                },
+                "multiSelect": false
+            }
+        ]
+    },
+    {
+        "name": "Scouting",
+        "fields": [
+            {
+                "title": "Pit Scouters?",
+                "description": "Do they have pit scouters?",
+                "type": "boolean",
+                "required": false,
+                "code": "pitSco",
+                "defaultValue": false
+            },
+            {
+                "title": "Match Scouters?",
+                "description": "Do they have match scouters?",
+                "type": "boolean",
+                "required": false,
+                "code": "matSco",
+                "defaultValue": false
+            },
+            {
+                "title": "Scouting Data Sharing?",
+                "description": "Would they be interesting in sharing scouting data in the future?",
+                "type": "boolean",
+                "required": false,
+                "code": "scoDataShar",
+                "defaultValue": false
+            }
+        ]
+    },
+    {
+        "name": "Comments",
+        "fields": [
+            {
+                "title": "Comments?",
+                "description": "Any comments (from you, the scouter, also please be nice)",
+                "type": "text",
+                "required": true,
+                "code": "com",
+                "defaultValue": "",
+                "formResetBehavior": "reset"
+            }
+        ]
+    }
+]
+}

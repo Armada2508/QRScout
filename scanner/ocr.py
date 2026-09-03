@@ -85,7 +85,7 @@ class OCR:
 #^ GOOGLE SHEETS STUFF
 
 # ↓STAYS THE SAME (CONSTANT)↓
-SCOPE = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+SCOPE = ["https://googleapis.com", "https://www.googleapis.com/auth/drive"]
 script_dir = Path(__file__).parent
 json_path = script_dir / "APIKey.json"
 
@@ -122,7 +122,7 @@ def update_google_sheet(qr_data):
     Pit: 45
     Match: 33
     Cycle: 10
-    2026:
+    2027:
     Pit: 34
     Match: 45
     Cycle: Negligable
@@ -132,7 +132,7 @@ def update_google_sheet(qr_data):
         sheet_number = 2
         #print("from ifs" + str(sheet_number))
     elif len(qr_data_array) == 47: # If it's match scout data
-        #print("Scout Type: Match")
+        print("Scout Type: Match")
         sheet_number = 1
         #print("from ifs " + str(sheet_number))
     elif len(qr_data_array) == 46: # If it's broken match scout data
@@ -142,9 +142,9 @@ def update_google_sheet(qr_data):
     # else:
     #     raise Exception("Could not identify scout data type.")
     if sheet_number == 2:
-        #print(sheet_number)
+        print(sheet_number)
         try:
-            sheet = client.open("Rebuilt 10k Lakes ARMADA Scouting Spreadsheet").worksheet("Pit Data")
+            sheet = client.open("Copy of Bluff County ARMADA Scouting Spreadsheet").worksheet("Pit Data")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -166,12 +166,12 @@ def update_google_sheet(qr_data):
         except Exception as e:
             print(f"Error updating Google Sheets: {e}")
     elif sheet_number == 1:
-        #print(sheet_number)
+        print(sheet_number)
         try:
-            sheet = client.open("Rebuilt 10k Lakes ARMADA Scouting Spreadsheet").worksheet("Match Data")
-    
+            sheet = client.open("Copy of Bluff County ARMADA Scouting Spreadsheet").worksheet("Match Data")
+            print("This is working fine")
         except gspread.exceptions.SpreadsheetNotFound:
-            raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
+            raise ValueError("Error: Google Sheet 'BioCore Scouter Spreadsheet' not found. Check the name or share settings.")
         try:
             #print((qr_data) + " from UGS")
             
@@ -190,12 +190,12 @@ def update_google_sheet(qr_data):
         except Exception as e:
             print(f"Error updating Google Sheets: {e}")
     elif sheet_number == 3:
-        #print(sheet_number)
+        print(sheet_number)
         try:
-            sheet = client.open("Rebuilt 10k Lakes ARMADA Scouting Spreadsheet").worksheet("Broken Match Data")
-            #print("sheet opened!")
+            sheet = client.open("Copy of Bluff County ARMADA Scouting Spreadsheet").worksheet("Broken Match Data")
+            print("sheet opened!")
         except gspread.exceptions.SpreadsheetNotFound:
-            raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
+            raise ValueError("Error: Google Sheet 'Biocore Scouter Spreadsheet' not found. Check the name or share settings.")
         try:
             #print((qr_data) + " from UGS")
             

@@ -1,5 +1,6 @@
 import subprocess
-from playsound import playsound
+
+# from playsound import playsound
 import time
 import os
 import cv2
@@ -8,7 +9,7 @@ import winsound
 import threading
 import gspread
 from pathlib import Path
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2.service_account import Credentials
 import string
 import random
 import pyttsx3
@@ -85,14 +86,14 @@ class OCR:
 #^ GOOGLE SHEETS STUFF
 
 # ↓STAYS THE SAME (CONSTANT)↓
-SCOPE = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+SCOPE = ["https://googleapis.com", "https://www.googleapis.com/auth/drive"]
 script_dir = Path(__file__).parent
 json_path = script_dir / "APIKey.json"
 
 if not os.path.exists(json_path):
     raise FileNotFoundError(f"Error: JSON file not found at {json_path}")
 
-creds = ServiceAccountCredentials.from_json_keyfile_name(json_path, SCOPE)
+creds = Credentials.from_json_keyfile_name(json_path, SCOPE)
 client = gspread.authorize(creds)
 if client:
     print("client Works!")
@@ -122,7 +123,7 @@ def update_google_sheet(qr_data):
     Pit: 45
     Match: 33
     Cycle: 10
-    2026:
+    2027:
     Pit: 34
     Match: 45
     Cycle: Negligable
@@ -144,7 +145,7 @@ def update_google_sheet(qr_data):
     if sheet_number == 2:
         #print(sheet_number)
         try:
-            sheet = client.open("Rebuilt 10k Lakes ARMADA Scouting Spreadsheet").worksheet("Pit Data")
+            sheet = client.open("Copy of Bluff County ARMADA Scouting Spreadsheet").worksheet("Pit Data")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -168,7 +169,7 @@ def update_google_sheet(qr_data):
     elif sheet_number == 1:
         #print(sheet_number)
         try:
-            sheet = client.open("Rebuilt 10k Lakes ARMADA Scouting Spreadsheet").worksheet("Match Data")
+            sheet = client.open("Copy of Bluff County ARMADA Scouting Spreadsheet").worksheet("Match Data")
     
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -192,7 +193,7 @@ def update_google_sheet(qr_data):
     elif sheet_number == 3:
         #print(sheet_number)
         try:
-            sheet = client.open("Rebuilt 10k Lakes ARMADA Scouting Spreadsheet").worksheet("Broken Match Data")
+            sheet = client.open("Copy of Bluff County ARMADA Scouting Spreadsheet").worksheet("Broken Match Data")
             #print("sheet opened!")
         except gspread.exceptions.SpreadsheetNotFound:
             raise ValueError("Error: Google Sheet 'Reefscape Scouter Spreadsheet' not found. Check the name or share settings.")
@@ -353,7 +354,7 @@ if __name__ == '__main__':
         prev_qr_arrays.append(qr_array)
         update_google_sheet(qr_array)
         # winsound.Beep(5000,1000)
-        playsound("C:/Users/andre/Downloads/waltuh.mp3")
+        # playsound("C:/Users/andre/Downloads/waltuh.mp3")
         time.sleep(0.1)
 
     cap.release()

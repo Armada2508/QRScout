@@ -255,6 +255,11 @@
                       "type": "number",
                       "description": "The step value",
                       "default": 1
+                    },
+                    "bigStep": {
+                      "type": "boolean",
+                      "description": "Bigger step",
+                      "default": false
                     }
                   },
                   "required": [
@@ -349,6 +354,13 @@
                     "max": {
                       "type": "number",
                       "description": "The maximum value"
+                    },
+                    "autofill": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "description": "Autofill options"
                     }
                   },
                   "required": [
