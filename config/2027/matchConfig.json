@@ -62,7 +62,7 @@
       "name": "Prematch",
       "fields": [
         {
-          "title": "First Name FRFR OH YEAH",
+          "title": "Scouter First Name",
           "description": "Enter the first name of the scouter.",
           "type": "text",
           "required": true,
