@@ -1,6 +1,6 @@
 {
 "title": "QRScout",
-  "page_title": "Biocore",
+  "page_title": "Rebuilt",
   "delimiter": "\t",
   "teamNumber": 2508,
   "theme": {
@@ -62,7 +62,7 @@
       "name": "Prematch",
       "fields": [
         {
-          "title": "Scouter First Name",
+          "title": "Scouter First Name IDK WHAT IM DOING",
           "description": "Enter the first name of the scouter.",
           "type": "text",
           "required": true,
